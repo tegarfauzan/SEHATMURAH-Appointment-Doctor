@@ -15,7 +15,7 @@
         <title>Homepage</title>
     </head>
     <body class="bg-[#F7F8FA]">
-        <main class="mx-auto max-w-[640px]">
+        <main class="mx-auto max-w-[640px] pb-[98px]">
             <header>
                 <div class="flex items-center justify-between rounded-b-3xl border border-[#F1F1F1] bg-[#FFFFFF] px-4 pb-8 pt-12">
                     <a href="#" class="flex items-center gap-x-2">
@@ -26,7 +26,7 @@
                         </div>
                     </a>
                     <button>
-                        <img src="assets/icons/notification.svg" alt="notification" />
+                        <img src="assets/icons/notification.svg" alt="notification" class="size-[50px]" />
                     </button>
                 </div>
                 <img src="assets/image/banner-consult.png" alt="banner consult" class="mx-auto min-h-[183px] min-w-[361px] p-4" />
@@ -63,24 +63,27 @@
                     </button>
                 </div>
             </section>
-            <section class="rounded-3xl bg-[#FFFFFF] py-8 pl-4 mt-4">
+            <section class="mb-4 mt-4 rounded-3xl bg-[#FFFFFF] py-8 pl-4">
                 <h2 class="font-jakarta text-[20px] font-bold leading-[25.2px] text-[#161616]">Recommended Doctors</h2>
                 <div class="flex overflow-x-auto pt-4">
-                    <button class="mx-0 mr-2 rounded-[100px] bg-[#2C40FF17] px-5 py-[14px] font-jakarta font-bold leading-[20.16px] text-[#2C40FF]">Lastest</button>
+                    <button class="tab-button active-tab mx-0 mr-2 rounded-[100px] bg-[#2C40FF17] px-5 py-[14px] font-jakarta font-bold leading-[20.16px] text-[#2C40FF]">
+                        Lastest
+                    </button>
                     <button
-                        class="whitespace-nowrap rounded-[100px] border border-[#F1F1F1] bg-[#FFFFFF] px-5 py-[14px] font-jakarta font-semibold leading-[20.16px] text-[#757C98]"
+                        class="tab-button whitespace-nowrap rounded-[100px] border border-[#F1F1F1] bg-[#FFFFFF] px-5 py-[14px] font-jakarta font-semibold leading-[20.16px] text-[#757C98]"
                     >
                         Pediatric Specialist
                     </button>
                     <button
-                        class="whitespace-nowrap rounded-[100px] border border-[#F1F1F1] bg-[#FFFFFF] px-5 py-[14px] font-jakarta font-semibold leading-[20.16px] text-[#757C98]"
+                        class="tab-button whitespace-nowrap rounded-[100px] border border-[#F1F1F1] bg-[#FFFFFF] px-5 py-[14px] font-jakarta font-semibold leading-[20.16px] text-[#757C98]"
                     >
                         Oftalmologi Specialist
                     </button>
                 </div>
                 <!-- card -->
-                <div class="mt-4 flex gap-x-4 overflow-x-auto">
-                    <div class="w-[280px] shrink-0 rounded-3xl border border-[#F1F1F1]">
+                <!-- card categories 1 -->
+                <div class="content mt-4 flex gap-x-4 overflow-x-auto">
+                    <button class="w-[280px] shrink-0 rounded-3xl border border-[#F1F1F1]">
                         <div class="relative h-[180px] w-full overflow-hidden rounded-t-3xl">
                             <img src="assets/image/dr-marci-maiden.png" alt="dr marci maiden" class="w-ful h-full" />
                             <img src="assets/icons/available.svg" alt="available" class="absolute left-4 top-4" />
@@ -101,8 +104,8 @@
                                 Rp 240.000 <span class="text-base font-semibold leading-[20.16px] text-[#757C98]">/hours</span>
                             </p>
                         </div>
-                    </div>
-                    <div class="w-[280px] shrink-0 rounded-3xl border border-[#F1F1F1]">
+                    </button>
+                    <button class="w-[280px] shrink-0 rounded-3xl border border-[#F1F1F1]">
                         <div class="relative h-[180px] w-full overflow-hidden rounded-t-3xl">
                             <img src="assets/image/dr-marci-maiden.png" alt="dr marci maiden" class="w-ful h-full" />
                             <img src="assets/icons/available.svg" alt="available" class="absolute left-4 top-4" />
@@ -123,8 +126,8 @@
                                 Rp 240.000 <span class="text-base font-semibold leading-[20.16px] text-[#757C98]">/hours</span>
                             </p>
                         </div>
-                    </div>
-                    <div class="w-[280px] shrink-0 rounded-3xl border border-[#F1F1F1]">
+                    </button>
+                    <button class="w-[280px] shrink-0 rounded-3xl border border-[#F1F1F1]">
                         <div class="relative h-[180px] w-full overflow-hidden rounded-t-3xl">
                             <img src="assets/image/dr-marci-maiden.png" alt="dr marci maiden" class="w-ful h-full" />
                             <img src="assets/icons/available.svg" alt="available" class="absolute left-4 top-4" />
@@ -145,10 +148,168 @@
                                 Rp 240.000 <span class="text-base font-semibold leading-[20.16px] text-[#757C98]">/hours</span>
                             </p>
                         </div>
-                    </div>
+                    </button>
+                </div>
+
+                <!-- card categories 2 -->
+                <div class="content mt-4 hidden gap-x-4 overflow-x-auto">
+                    <button class="w-[280px] shrink-0 rounded-3xl border border-[#F1F1F1]">
+                        <div class="relative h-[180px] w-full overflow-hidden rounded-t-3xl">
+                            <img src="assets/image/dr-marci-maiden.png" alt="dr marci maiden" class="w-ful h-full" />
+                            <img src="assets/icons/available.svg" alt="available" class="absolute left-4 top-4" />
+                        </div>
+                        <div class="flex h-[48px] w-full items-center justify-between bg-[#2C40FF] px-5 py-[14px]">
+                            <p class="font-jakarta font-bold leading-[20.16px] text-[#FFFFFF]">Madelyn Hospital2</p>
+                            <img src="assets/icons/hospital.svg" alt="hospital" />
+                        </div>
+                        <div class="w-full overflow-hidden rounded-b-3xl bg-[#FFFFFF] p-5">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h3 class="font-jakarta text-lg font-bold leading-[22.68px] text-[#161616]">Dr. Marci Maiden2</h3>
+                                    <p class="mt-1 font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Internist Specialist2</p>
+                                </div>
+                                <img src="assets/icons/star45.svg" alt="star 4.5" />
+                            </div>
+                            <p class="mt-4 font-jakarta text-lg font-bold leading-[22.68px] text-[#FF5050]">
+                                Rp 240.000 <span class="text-base font-semibold leading-[20.16px] text-[#757C98]">/hours</span>
+                            </p>
+                        </div>
+                    </button>
+                    <button class="w-[280px] shrink-0 rounded-3xl border border-[#F1F1F1]">
+                        <div class="relative h-[180px] w-full overflow-hidden rounded-t-3xl">
+                            <img src="assets/image/dr-marci-maiden.png" alt="dr marci maiden" class="w-ful h-full" />
+                            <img src="assets/icons/available.svg" alt="available" class="absolute left-4 top-4" />
+                        </div>
+                        <div class="flex h-[48px] w-full items-center justify-between bg-[#2C40FF] px-5 py-[14px]">
+                            <p class="font-jakarta font-bold leading-[20.16px] text-[#FFFFFF]">Madelyn Hospital2</p>
+                            <img src="assets/icons/hospital.svg" alt="hospital" />
+                        </div>
+                        <div class="w-full overflow-hidden rounded-b-3xl bg-[#FFFFFF] p-5">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h3 class="font-jakarta text-lg font-bold leading-[22.68px] text-[#161616]">Dr. Marci Maiden2</h3>
+                                    <p class="mt-1 font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Internist Specialist2</p>
+                                </div>
+                                <img src="assets/icons/star45.svg" alt="star 4.5" />
+                            </div>
+                            <p class="mt-4 font-jakarta text-lg font-bold leading-[22.68px] text-[#FF5050]">
+                                Rp 240.000 <span class="text-base font-semibold leading-[20.16px] text-[#757C98]">/hours</span>
+                            </p>
+                        </div>
+                    </button>
+                    <button class="w-[280px] shrink-0 rounded-3xl border border-[#F1F1F1]">
+                        <div class="relative h-[180px] w-full overflow-hidden rounded-t-3xl">
+                            <img src="assets/image/dr-marci-maiden.png" alt="dr marci maiden" class="w-ful h-full" />
+                            <img src="assets/icons/available.svg" alt="available" class="absolute left-4 top-4" />
+                        </div>
+                        <div class="flex h-[48px] w-full items-center justify-between bg-[#2C40FF] px-5 py-[14px]">
+                            <p class="font-jakarta font-bold leading-[20.16px] text-[#FFFFFF]">Madelyn Hospital2</p>
+                            <img src="assets/icons/hospital.svg" alt="hospital" />
+                        </div>
+                        <div class="w-full overflow-hidden rounded-b-3xl bg-[#FFFFFF] p-5">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h3 class="font-jakarta text-lg font-bold leading-[22.68px] text-[#161616]">Dr. Marci Maiden2</h3>
+                                    <p class="mt-1 font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Internist Specialist2</p>
+                                </div>
+                                <img src="assets/icons/star45.svg" alt="star 4.5" />
+                            </div>
+                            <p class="mt-4 font-jakarta text-lg font-bold leading-[22.68px] text-[#FF5050]">
+                                Rp 240.000 <span class="text-base font-semibold leading-[20.16px] text-[#757C98]">/hours</span>
+                            </p>
+                        </div>
+                    </button>
+                </div>
+                <!-- card categories 3 -->
+                <div class="content mt-4 hidden gap-x-4 overflow-x-auto">
+                    <button class="w-[280px] shrink-0 rounded-3xl border border-[#F1F1F1]">
+                        <div class="relative h-[180px] w-full overflow-hidden rounded-t-3xl">
+                            <img src="assets/image/dr-marci-maiden.png" alt="dr marci maiden" class="w-ful h-full" />
+                            <img src="assets/icons/available.svg" alt="available" class="absolute left-4 top-4" />
+                        </div>
+                        <div class="flex h-[48px] w-full items-center justify-between bg-[#2C40FF] px-5 py-[14px]">
+                            <p class="font-jakarta font-bold leading-[20.16px] text-[#FFFFFF]">Madelyn Hospital3</p>
+                            <img src="assets/icons/hospital.svg" alt="hospital" />
+                        </div>
+                        <div class="w-full overflow-hidden rounded-b-3xl bg-[#FFFFFF] p-5">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h3 class="font-jakarta text-lg font-bold leading-[22.68px] text-[#161616]">Dr. Marci Maiden3</h3>
+                                    <p class="mt-1 font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Internist Specialist3</p>
+                                </div>
+                                <img src="assets/icons/star45.svg" alt="star 4.5" />
+                            </div>
+                            <p class="mt-4 font-jakarta text-lg font-bold leading-[22.68px] text-[#FF5050]">
+                                Rp 240.000 <span class="text-base font-semibold leading-[20.16px] text-[#757C98]">/hours</span>
+                            </p>
+                        </div>
+                    </button>
+                    <button class="w-[280px] shrink-0 rounded-3xl border border-[#F1F1F1]">
+                        <div class="relative h-[180px] w-full overflow-hidden rounded-t-3xl">
+                            <img src="assets/image/dr-marci-maiden.png" alt="dr marci maiden" class="w-ful h-full" />
+                            <img src="assets/icons/available.svg" alt="available" class="absolute left-4 top-4" />
+                        </div>
+                        <div class="flex h-[48px] w-full items-center justify-between bg-[#2C40FF] px-5 py-[14px]">
+                            <p class="font-jakarta font-bold leading-[20.16px] text-[#FFFFFF]">Madelyn Hospital3</p>
+                            <img src="assets/icons/hospital.svg" alt="hospital" />
+                        </div>
+                        <div class="w-full overflow-hidden rounded-b-3xl bg-[#FFFFFF] p-5">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h3 class="font-jakarta text-lg font-bold leading-[22.68px] text-[#161616]">Dr. Marci Maiden3</h3>
+                                    <p class="mt-1 font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Internist Specialist3</p>
+                                </div>
+                                <img src="assets/icons/star45.svg" alt="star 4.5" />
+                            </div>
+                            <p class="mt-4 font-jakarta text-lg font-bold leading-[22.68px] text-[#FF5050]">
+                                Rp 240.000 <span class="text-base font-semibold leading-[20.16px] text-[#757C98]">/hours</span>
+                            </p>
+                        </div>
+                    </button>
+                    <button class="w-[280px] shrink-0 rounded-3xl border border-[#F1F1F1]">
+                        <div class="relative h-[180px] w-full overflow-hidden rounded-t-3xl">
+                            <img src="assets/image/dr-marci-maiden.png" alt="dr marci maiden" class="w-ful h-full" />
+                            <img src="assets/icons/available.svg" alt="available" class="absolute left-4 top-4" />
+                        </div>
+                        <div class="flex h-[48px] w-full items-center justify-between bg-[#2C40FF] px-5 py-[14px]">
+                            <p class="font-jakarta font-bold leading-[20.16px] text-[#FFFFFF]">Madelyn Hospital3</p>
+                            <img src="assets/icons/hospital.svg" alt="hospital" />
+                        </div>
+                        <div class="w-full overflow-hidden rounded-b-3xl bg-[#FFFFFF] p-5">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h3 class="font-jakarta text-lg font-bold leading-[22.68px] text-[#161616]">Dr. Marci Maiden3</h3>
+                                    <p class="mt-1 font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Internist Specialist3</p>
+                                </div>
+                                <img src="assets/icons/star45.svg" alt="star 4.5" />
+                            </div>
+                            <p class="mt-4 font-jakarta text-lg font-bold leading-[22.68px] text-[#FF5050]">
+                                Rp 240.000 <span class="text-base font-semibold leading-[20.16px] text-[#757C98]">/hours</span>
+                            </p>
+                        </div>
+                    </button>
                 </div>
             </section>
         </main>
-        <nav class="mx-auto max-w-[640px]"></nav>
+        <nav class="fixed bottom-0 left-0 right-0 z-30 mx-auto">
+            <div class="mx-auto max-w-[640px]">
+                <div class="flex items-center justify-between rounded-t-2xl border-t border-[#F7F8FA] bg-[#FFFFFF] px-4 py-6">
+                    <a href="#" class="grid w-[112.33px] place-items-center gap-[6px]">
+                        <img src="assets/icons/home.svg" alt="home" />
+                        <p class="font-jakarta font-bold leading-[20.16px] text-[#2C40FF]">Home</p>
+                    </a>
+                    <a href="#" class="grid w-[112.33px] place-items-center gap-[6px]">
+                        <img src="assets/icons/appointment.svg" alt="appointment" />
+                        <p class="text-center font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Appointment</p>
+                    </a>
+                    <a href="#" class="grid w-[112.33px] place-items-center gap-[6px]">
+                        <img src="assets/icons/my-booking.svg" alt="my my booking" />
+                        <p class="text-center font-jakarta font-semibold leading-[20.16px] text-[#757C98]">My Booking</p>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <script type="module" src="index.js"></script>
     </body>
 </html>
