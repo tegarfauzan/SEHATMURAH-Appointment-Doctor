@@ -2,6 +2,7 @@
 var categoriesSwiper = new Swiper(".categoriesSwiper", {
     slidesPerView: "auto", // Adjust number of slides based on card width
     freeMode: true,
+    spaceBetween: 8,
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -10,6 +11,7 @@ var categoriesSwiper = new Swiper(".categoriesSwiper", {
 var cardsSwiper = new Swiper(".cardsSwiper", {
     slidesPerView: "auto", // Adjust number of slides based on card width
     freeMode: true,
+    spaceBetween: 16,
 });
 
 // tabs
