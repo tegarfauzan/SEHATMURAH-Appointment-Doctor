@@ -13,56 +13,52 @@
         <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
         <!-- Link Swiper's CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-        <link href="./dist/output.css" rel="stylesheet" />
+        <link href="./output.css" rel="stylesheet" />
         <title>Homepage</title>
     </head>
     <body class="bg-[#F7F8FA]">
-        <main class="mx-auto max-w-[640px] pb-[98px]">
+        <main class="mx-auto max-w-[640px] overflow-hidden pb-[98px]">
             <header>
                 <div class="flex items-center justify-between rounded-b-3xl border border-[#F1F1F1] bg-[#FFFFFF] px-4 pb-8 pt-12">
-                    <a href="#" class="flex items-center gap-x-2">
-                        <img src="assets/company/company.png" alt="company logo" class="size-[42px]" />
-                        <div>
-                            <h1 class="font-nunito text-lg font-black leading-[24.55px] text-[#000000]">SEHATMURAH</h1>
-                            <p class="font-jakarta text-xs font-semibold leading-[15.12px] text-[#757C98]">Appointment Doctor</p>
-                        </div>
+                    <a href="#">
+                        <img src="assets/company/company.png" alt="company" class="h-[42px] shrink-0" />
                     </a>
-                    <button>
-                        <img src="assets/icons/notification.svg" alt="notification" class="size-[50px]" />
-                    </button>
+                    <a href="#">
+                        <img src="assets/icons/notification.svg" alt="notification" class="size-[50px] shrink-0" />
+                    </a>
                 </div>
                 <img src="assets/image/banner-consult.png" alt="banner consult" class="mx-auto min-h-[183px] min-w-[361px] p-4" />
             </header>
             <section class="rounded-3xl bg-[#FFFFFF] px-4 py-8">
                 <div class="flex items-center justify-between">
                     <h2 class="font-jakarta text-[20px] font-bold leading-[25.2px] text-[#161616]">Specialist Categories</h2>
-                    <button class="font-jakarta text-sm font-bold leading-[17.64px] text-[#757C98]">View All</button>
+                    <a href="#" class="font-jakarta text-sm font-bold leading-[17.64px] text-[#757C98]">View All</a>
                 </div>
-                <div class="flex flex-wrap items-center gap-x-[14px] gap-y-4 pt-4">
-                    <button class="h-[102px] w-[111px]">
+                <div class="grid grid-cols-3 justify-items-center gap-y-4 pt-4">
+                    <a href="#" class="h-[102px] w-[111px]">
                         <img src="assets/image/pediatric.png" alt="pediatric" class="mx-auto size-[72px]" />
                         <h3 class="mt-[10px] text-center font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Pediatric</h3>
-                    </button>
-                    <button class="h-[102px] w-[111px]">
+                    </a>
+                    <a href="#" class="h-[102px] w-[111px]">
                         <img src="assets/image/cardiology.png" alt="cardiology" class="mx-auto size-[72px]" />
                         <h3 class="mt-[10px] text-center font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Cardiology</h3>
-                    </button>
-                    <button class="h-[102px] w-[111px]">
+                    </a>
+                    <a href="#" class="h-[102px] w-[111px]">
                         <img src="assets/image/neurology.png" alt="neurology" class="mx-auto size-[72px]" />
                         <h3 class="mt-[10px] text-center font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Neurology</h3>
-                    </button>
-                    <button class="h-[102px] w-[111px]">
+                    </a>
+                    <a href="#" class="h-[102px] w-[111px]">
                         <img src="assets/image/obstetrics.png" alt="obstetrics" class="mx-auto size-[72px]" />
                         <h3 class="mt-[10px] text-center font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Obstetrics</h3>
-                    </button>
-                    <button class="h-[102px] w-[111px]">
+                    </a>
+                    <a href="#" class="h-[102px] w-[111px]">
                         <img src="assets/image/dermatology.png" alt="dermatology" class="mx-auto size-[72px]" />
                         <h3 class="mt-[10px] text-center font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Dermatology</h3>
-                    </button>
-                    <button class="h-[102px] w-[111px]">
+                    </a>
+                    <a href="#" class="h-[102px] w-[111px]">
                         <img src="assets/image/urologist.png" alt="urologist" class="mx-auto size-[72px]" />
                         <h3 class="mt-[10px] text-center font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Urologist</h3>
-                    </button>
+                    </a>
                 </div>
             </section>
             <section class="mb-4 mt-4 rounded-3xl bg-[#FFFFFF] py-8 pl-4">
@@ -160,142 +156,146 @@
                 </div>
 
                 <!-- card categories 2 -->
-                <div class="content mySwiper mt-4 hidden gap-x-4">
-                    <button class="swiper-slide w-[280px] shrink-0 rounded-3xl border border-[#F1F1F1]">
-                        <div class="relative h-[180px] w-full overflow-hidden rounded-t-3xl">
-                            <img src="assets/image/dr-marci-maiden.png" alt="dr marci maiden" class="w-ful h-full" />
-                            <img src="assets/icons/available.svg" alt="available" class="absolute left-4 top-4" />
-                        </div>
-                        <div class="flex h-[48px] w-full items-center justify-between bg-[#2C40FF] px-5 py-[14px]">
-                            <p class="font-jakarta font-bold leading-[20.16px] text-[#FFFFFF]">Madelyn Hospital2</p>
-                            <img src="assets/icons/hospital.svg" alt="hospital" />
-                        </div>
-                        <div class="w-full overflow-hidden rounded-b-3xl bg-[#FFFFFF] p-5">
-                            <div class="flex items-center justify-between">
-                                <div>
-                                    <h3 class="font-jakarta text-lg font-bold leading-[22.68px] text-[#161616]">Dr. Marci Maiden2</h3>
-                                    <p class="mt-1 font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Internist Specialist2</p>
-                                </div>
-                                <img src="assets/icons/star45.svg" alt="star 4.5" />
+                <div class="cardsSwiper mt-4">
+                    <div class="content swiper-wrapper hidden gap-x-4">
+                        <a href="#" class="swiper-slide w-[280px] shrink-0 rounded-3xl border border-[#F1F1F1]">
+                            <div class="relative h-[180px] w-full overflow-hidden rounded-t-3xl">
+                                <img src="assets/image/dr-marci-maiden.png" alt="dr marci maiden" class="w-ful h-full" />
+                                <img src="assets/icons/available.svg" alt="available" class="absolute left-4 top-4" />
                             </div>
-                            <p class="mt-4 text-start font-jakarta text-lg font-bold leading-[22.68px] text-[#FF5050]">
-                                Rp 240.000 <span class="text-base font-semibold leading-[20.16px] text-[#757C98]">/hours</span>
-                            </p>
-                        </div>
-                    </button>
-                    <button class="swiper-slide w-[280px] shrink-0 rounded-3xl border border-[#F1F1F1]">
-                        <div class="relative h-[180px] w-full overflow-hidden rounded-t-3xl">
-                            <img src="assets/image/dr-marci-maiden.png" alt="dr marci maiden" class="w-ful h-full" />
-                            <img src="assets/icons/available.svg" alt="available" class="absolute left-4 top-4" />
-                        </div>
-                        <div class="flex h-[48px] w-full items-center justify-between bg-[#2C40FF] px-5 py-[14px]">
-                            <p class="font-jakarta font-bold leading-[20.16px] text-[#FFFFFF]">Madelyn Hospital2</p>
-                            <img src="assets/icons/hospital.svg" alt="hospital" />
-                        </div>
-                        <div class="w-full overflow-hidden rounded-b-3xl bg-[#FFFFFF] p-5">
-                            <div class="flex items-center justify-between">
-                                <div>
-                                    <h3 class="font-jakarta text-lg font-bold leading-[22.68px] text-[#161616]">Dr. Marci Maiden2</h3>
-                                    <p class="mt-1 font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Internist Specialist2</p>
-                                </div>
-                                <img src="assets/icons/star45.svg" alt="star 4.5" />
+                            <div class="flex h-[48px] w-full items-center justify-between bg-[#2C40FF] px-5 py-[14px]">
+                                <p class="font-jakarta font-bold leading-[20.16px] text-[#FFFFFF]">Madelyn Hospital2</p>
+                                <img src="assets/icons/hospital.svg" alt="hospital" />
                             </div>
-                            <p class="mt-4 text-start font-jakarta text-lg font-bold leading-[22.68px] text-[#FF5050]">
-                                Rp 240.000 <span class="text-base font-semibold leading-[20.16px] text-[#757C98]">/hours</span>
-                            </p>
-                        </div>
-                    </button>
-                    <button class="swiper-slide w-[280px] shrink-0 rounded-3xl border border-[#F1F1F1]">
-                        <div class="relative h-[180px] w-full overflow-hidden rounded-t-3xl">
-                            <img src="assets/image/dr-marci-maiden.png" alt="dr marci maiden" class="w-ful h-full" />
-                            <img src="assets/icons/available.svg" alt="available" class="absolute left-4 top-4" />
-                        </div>
-                        <div class="flex h-[48px] w-full items-center justify-between bg-[#2C40FF] px-5 py-[14px]">
-                            <p class="font-jakarta font-bold leading-[20.16px] text-[#FFFFFF]">Madelyn Hospital2</p>
-                            <img src="assets/icons/hospital.svg" alt="hospital" />
-                        </div>
-                        <div class="w-full overflow-hidden rounded-b-3xl bg-[#FFFFFF] p-5">
-                            <div class="flex items-center justify-between">
-                                <div>
-                                    <h3 class="font-jakarta text-lg font-bold leading-[22.68px] text-[#161616]">Dr. Marci Maiden2</h3>
-                                    <p class="mt-1 font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Internist Specialist2</p>
+                            <div class="w-full overflow-hidden rounded-b-3xl bg-[#FFFFFF] p-5">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <h3 class="font-jakarta text-lg font-bold leading-[22.68px] text-[#161616]">Dr. Marci Maiden2</h3>
+                                        <p class="mt-1 font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Internist Specialist2</p>
+                                    </div>
+                                    <img src="assets/icons/star45.svg" alt="star 4.5" />
                                 </div>
-                                <img src="assets/icons/star45.svg" alt="star 4.5" />
+                                <p class="mt-4 text-start font-jakarta text-lg font-bold leading-[22.68px] text-[#FF5050]">
+                                    Rp 240.000 <span class="text-base font-semibold leading-[20.16px] text-[#757C98]">/hours</span>
+                                </p>
                             </div>
-                            <p class="mt-4 text-start font-jakarta text-lg font-bold leading-[22.68px] text-[#FF5050]">
-                                Rp 240.000 <span class="text-base font-semibold leading-[20.16px] text-[#757C98]">/hours</span>
-                            </p>
-                        </div>
-                    </button>
+                        </a>
+                        <a href="#" class="swiper-slide w-[280px] shrink-0 rounded-3xl border border-[#F1F1F1]">
+                            <div class="relative h-[180px] w-full overflow-hidden rounded-t-3xl">
+                                <img src="assets/image/dr-marci-maiden.png" alt="dr marci maiden" class="w-ful h-full" />
+                                <img src="assets/icons/available.svg" alt="available" class="absolute left-4 top-4" />
+                            </div>
+                            <div class="flex h-[48px] w-full items-center justify-between bg-[#2C40FF] px-5 py-[14px]">
+                                <p class="font-jakarta font-bold leading-[20.16px] text-[#FFFFFF]">Madelyn Hospital2</p>
+                                <img src="assets/icons/hospital.svg" alt="hospital" />
+                            </div>
+                            <div class="w-full overflow-hidden rounded-b-3xl bg-[#FFFFFF] p-5">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <h3 class="font-jakarta text-lg font-bold leading-[22.68px] text-[#161616]">Dr. Marci Maiden2</h3>
+                                        <p class="mt-1 font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Internist Specialist2</p>
+                                    </div>
+                                    <img src="assets/icons/star45.svg" alt="star 4.5" />
+                                </div>
+                                <p class="mt-4 text-start font-jakarta text-lg font-bold leading-[22.68px] text-[#FF5050]">
+                                    Rp 240.000 <span class="text-base font-semibold leading-[20.16px] text-[#757C98]">/hours</span>
+                                </p>
+                            </div>
+                        </a>
+                        <a href="#" class="swiper-slide w-[280px] shrink-0 rounded-3xl border border-[#F1F1F1]">
+                            <div class="relative h-[180px] w-full overflow-hidden rounded-t-3xl">
+                                <img src="assets/image/dr-marci-maiden.png" alt="dr marci maiden" class="w-ful h-full" />
+                                <img src="assets/icons/available.svg" alt="available" class="absolute left-4 top-4" />
+                            </div>
+                            <div class="flex h-[48px] w-full items-center justify-between bg-[#2C40FF] px-5 py-[14px]">
+                                <p class="font-jakarta font-bold leading-[20.16px] text-[#FFFFFF]">Madelyn Hospital2</p>
+                                <img src="assets/icons/hospital.svg" alt="hospital" />
+                            </div>
+                            <div class="w-full overflow-hidden rounded-b-3xl bg-[#FFFFFF] p-5">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <h3 class="font-jakarta text-lg font-bold leading-[22.68px] text-[#161616]">Dr. Marci Maiden2</h3>
+                                        <p class="mt-1 font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Internist Specialist2</p>
+                                    </div>
+                                    <img src="assets/icons/star45.svg" alt="star 4.5" />
+                                </div>
+                                <p class="mt-4 text-start font-jakarta text-lg font-bold leading-[22.68px] text-[#FF5050]">
+                                    Rp 240.000 <span class="text-base font-semibold leading-[20.16px] text-[#757C98]">/hours</span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
                 <!-- card categories 3 -->
-                <div class="content mySwiper mt-4 hidden gap-x-4">
-                    <button class="swiper-slide w-[280px] shrink-0 rounded-3xl border border-[#F1F1F1]">
-                        <div class="relative h-[180px] w-full overflow-hidden rounded-t-3xl">
-                            <img src="assets/image/dr-marci-maiden.png" alt="dr marci maiden" class="w-ful h-full" />
-                            <img src="assets/icons/available.svg" alt="available" class="absolute left-4 top-4" />
-                        </div>
-                        <div class="flex h-[48px] w-full items-center justify-between bg-[#2C40FF] px-5 py-[14px]">
-                            <p class="font-jakarta font-bold leading-[20.16px] text-[#FFFFFF]">Madelyn Hospital3</p>
-                            <img src="assets/icons/hospital.svg" alt="hospital" />
-                        </div>
-                        <div class="w-full overflow-hidden rounded-b-3xl bg-[#FFFFFF] p-5">
-                            <div class="flex items-center justify-between">
-                                <div>
-                                    <h3 class="font-jakarta text-lg font-bold leading-[22.68px] text-[#161616]">Dr. Marci Maiden3</h3>
-                                    <p class="mt-1 font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Internist Specialist3</p>
-                                </div>
-                                <img src="assets/icons/star45.svg" alt="star 4.5" />
+                <div class="cardsSwiper mt-4">
+                    <div class="content swiper-wrapper hidden gap-x-4">
+                        <a href="#" class="swiper-slide w-[280px] shrink-0 rounded-3xl border border-[#F1F1F1]">
+                            <div class="relative h-[180px] w-full overflow-hidden rounded-t-3xl">
+                                <img src="assets/image/dr-marci-maiden.png" alt="dr marci maiden" class="w-ful h-full" />
+                                <img src="assets/icons/available.svg" alt="available" class="absolute left-4 top-4" />
                             </div>
-                            <p class="mt-4 text-start font-jakarta text-lg font-bold leading-[22.68px] text-[#FF5050]">
-                                Rp 240.000 <span class="text-base font-semibold leading-[20.16px] text-[#757C98]">/hours</span>
-                            </p>
-                        </div>
-                    </button>
-                    <button class="swiper-slide w-[280px] shrink-0 rounded-3xl border border-[#F1F1F1]">
-                        <div class="relative h-[180px] w-full overflow-hidden rounded-t-3xl">
-                            <img src="assets/image/dr-marci-maiden.png" alt="dr marci maiden" class="w-ful h-full" />
-                            <img src="assets/icons/available.svg" alt="available" class="absolute left-4 top-4" />
-                        </div>
-                        <div class="flex h-[48px] w-full items-center justify-between bg-[#2C40FF] px-5 py-[14px]">
-                            <p class="font-jakarta font-bold leading-[20.16px] text-[#FFFFFF]">Madelyn Hospital3</p>
-                            <img src="assets/icons/hospital.svg" alt="hospital" />
-                        </div>
-                        <div class="w-full overflow-hidden rounded-b-3xl bg-[#FFFFFF] p-5">
-                            <div class="flex items-center justify-between">
-                                <div>
-                                    <h3 class="font-jakarta text-lg font-bold leading-[22.68px] text-[#161616]">Dr. Marci Maiden3</h3>
-                                    <p class="mt-1 font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Internist Specialist3</p>
-                                </div>
-                                <img src="assets/icons/star45.svg" alt="star 4.5" />
+                            <div class="flex h-[48px] w-full items-center justify-between bg-[#2C40FF] px-5 py-[14px]">
+                                <p class="font-jakarta font-bold leading-[20.16px] text-[#FFFFFF]">Madelyn Hospital3</p>
+                                <img src="assets/icons/hospital.svg" alt="hospital" />
                             </div>
-                            <p class="mt-4 text-start font-jakarta text-lg font-bold leading-[22.68px] text-[#FF5050]">
-                                Rp 240.000 <span class="text-base font-semibold leading-[20.16px] text-[#757C98]">/hours</span>
-                            </p>
-                        </div>
-                    </button>
-                    <button class="swiper-slide w-[280px] shrink-0 rounded-3xl border border-[#F1F1F1]">
-                        <div class="relative h-[180px] w-full overflow-hidden rounded-t-3xl">
-                            <img src="assets/image/dr-marci-maiden.png" alt="dr marci maiden" class="w-ful h-full" />
-                            <img src="assets/icons/available.svg" alt="available" class="absolute left-4 top-4" />
-                        </div>
-                        <div class="flex h-[48px] w-full items-center justify-between bg-[#2C40FF] px-5 py-[14px]">
-                            <p class="font-jakarta font-bold leading-[20.16px] text-[#FFFFFF]">Madelyn Hospital3</p>
-                            <img src="assets/icons/hospital.svg" alt="hospital" />
-                        </div>
-                        <div class="w-full overflow-hidden rounded-b-3xl bg-[#FFFFFF] p-5">
-                            <div class="flex items-center justify-between">
-                                <div>
-                                    <h3 class="font-jakarta text-lg font-bold leading-[22.68px] text-[#161616]">Dr. Marci Maiden3</h3>
-                                    <p class="mt-1 font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Internist Specialist3</p>
+                            <div class="w-full overflow-hidden rounded-b-3xl bg-[#FFFFFF] p-5">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <h3 class="font-jakarta text-lg font-bold leading-[22.68px] text-[#161616]">Dr. Marci Maiden3</h3>
+                                        <p class="mt-1 font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Internist Specialist3</p>
+                                    </div>
+                                    <img src="assets/icons/star45.svg" alt="star 4.5" />
                                 </div>
-                                <img src="assets/icons/star45.svg" alt="star 4.5" />
+                                <p class="mt-4 text-start font-jakarta text-lg font-bold leading-[22.68px] text-[#FF5050]">
+                                    Rp 240.000 <span class="text-base font-semibold leading-[20.16px] text-[#757C98]">/hours</span>
+                                </p>
                             </div>
-                            <p class="mt-4 text-start font-jakarta text-lg font-bold leading-[22.68px] text-[#FF5050]">
-                                Rp 240.000 <span class="text-base font-semibold leading-[20.16px] text-[#757C98]">/hours</span>
-                            </p>
-                        </div>
-                    </button>
+                        </a>
+                        <a href="#" class="swiper-slide w-[280px] shrink-0 rounded-3xl border border-[#F1F1F1]">
+                            <div class="relative h-[180px] w-full overflow-hidden rounded-t-3xl">
+                                <img src="assets/image/dr-marci-maiden.png" alt="dr marci maiden" class="w-ful h-full" />
+                                <img src="assets/icons/available.svg" alt="available" class="absolute left-4 top-4" />
+                            </div>
+                            <div class="flex h-[48px] w-full items-center justify-between bg-[#2C40FF] px-5 py-[14px]">
+                                <p class="font-jakarta font-bold leading-[20.16px] text-[#FFFFFF]">Madelyn Hospital3</p>
+                                <img src="assets/icons/hospital.svg" alt="hospital" />
+                            </div>
+                            <div class="w-full overflow-hidden rounded-b-3xl bg-[#FFFFFF] p-5">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <h3 class="font-jakarta text-lg font-bold leading-[22.68px] text-[#161616]">Dr. Marci Maiden3</h3>
+                                        <p class="mt-1 font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Internist Specialist3</p>
+                                    </div>
+                                    <img src="assets/icons/star45.svg" alt="star 4.5" />
+                                </div>
+                                <p class="mt-4 text-start font-jakarta text-lg font-bold leading-[22.68px] text-[#FF5050]">
+                                    Rp 240.000 <span class="text-base font-semibold leading-[20.16px] text-[#757C98]">/hours</span>
+                                </p>
+                            </div>
+                        </a>
+                        <a href="#" class="swiper-slide w-[280px] shrink-0 rounded-3xl border border-[#F1F1F1]">
+                            <div class="relative h-[180px] w-full overflow-hidden rounded-t-3xl">
+                                <img src="assets/image/dr-marci-maiden.png" alt="dr marci maiden" class="w-ful h-full" />
+                                <img src="assets/icons/available.svg" alt="available" class="absolute left-4 top-4" />
+                            </div>
+                            <div class="flex h-[48px] w-full items-center justify-between bg-[#2C40FF] px-5 py-[14px]">
+                                <p class="font-jakarta font-bold leading-[20.16px] text-[#FFFFFF]">Madelyn Hospital3</p>
+                                <img src="assets/icons/hospital.svg" alt="hospital" />
+                            </div>
+                            <div class="w-full overflow-hidden rounded-b-3xl bg-[#FFFFFF] p-5">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <h3 class="font-jakarta text-lg font-bold leading-[22.68px] text-[#161616]">Dr. Marci Maiden3</h3>
+                                        <p class="mt-1 font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Internist Specialist3</p>
+                                    </div>
+                                    <img src="assets/icons/star45.svg" alt="star 4.5" />
+                                </div>
+                                <p class="mt-4 text-start font-jakarta text-lg font-bold leading-[22.68px] text-[#FF5050]">
+                                    Rp 240.000 <span class="text-base font-semibold leading-[20.16px] text-[#757C98]">/hours</span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </section>
         </main>
@@ -317,25 +317,8 @@
                 </div>
             </div>
         </nav>
-
         <!-- Swiper JS -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script type="module" src="index.js"></script>
-
-        <!-- Initialize Swiper -->
-        <script>
-            var categoriesSwiper = new Swiper(".categoriesSwiper", {
-                slidesPerView: "auto", // Adjust number of slides based on card width
-                freeMode: true,
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-            });
-            var cardsSwiper = new Swiper(".cardsSwiper", {
-                slidesPerView: "auto", // Adjust number of slides based on card width
-                freeMode: true,
-            });
-        </script>
     </body>
 </html>

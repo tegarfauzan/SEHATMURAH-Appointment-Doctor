@@ -1,3 +1,17 @@
+// swiper
+var categoriesSwiper = new Swiper(".categoriesSwiper", {
+    slidesPerView: "auto", // Adjust number of slides based on card width
+    freeMode: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
+var cardsSwiper = new Swiper(".cardsSwiper", {
+    slidesPerView: "auto", // Adjust number of slides based on card width
+    freeMode: true,
+});
+
 // tabs
 const tabs = document.querySelectorAll(".tab-button");
 const contents = document.querySelectorAll(".content");
