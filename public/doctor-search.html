@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- plus jakarta sans -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
+        <link href="./dist/output.css" rel="stylesheet" />
+        <title>Doctor Search</title>
+    </head>
+    <body class="bg-[#F7F8FA]">
+        <main class="mx-auto flex h-screen max-w-[640px] items-center justify-center px-4">
+            <div class="my-auto w-full rounded-3xl bg-[#FFFFFF] px-4 py-8">
+                <div class="mb-8 grid justify-items-center">
+                    <img src="assets/icons/lets-make-appointment.svg" alt="let's make appointment" />
+                    <h1 class="font-jakarta text-2xl font-extrabold leading-[30.24px] text-[#161616]">Let’s Make Appointment</h1>
+                </div>
+                <form action="" class="w-full">
+                    <!-- label1 -->
+                    <label for="city" class="font-jakarta font-semibold leading-[20.16px]">Which city are you in?</label>
+                    <div class="relative mb-6 mt-4">
+                        <input
+                            type="text"
+                            id="city"
+                            placeholder="Enter the city name"
+                            class="peer h-[56px] w-full rounded-[100px] border border-[#F1F1F1] pl-12 font-jakarta font-bold leading-[20.16px] text-[#161616] placeholder:font-jakarta placeholder:font-semibold placeholder:leading-[20.16px] placeholder:text-[#757C98] focus:outline-none"
+                            autocomplete="off"
+                            required
+                        />
+                        <img src="assets/icons/enter-the-city-name-grey.svg" alt="enter the city name" class="absolute left-4 top-1/2 -translate-y-1/2" />
+                        <img src="assets/icons/enter-the-city-name-black.svg" alt="enter the city name" class="absolute left-4 top-1/2 -translate-y-1/2 peer-placeholder-shown:hidden" />
+                    </div>
+                    <!-- label2 -->
+                    <h3 class="font-jakarta font-semibold leading-[20.16px]">What Speciality you need?</h3>
+                    <button id="openModal" class="relative mb-8 mt-4 h-[56px] w-full rounded-full border border-[#F1F1F1] pl-12 text-start font-jakarta font-bold leading-[20.16px] text-[#757C98]">
+                        <span id="selectedValue" class="">Choose a specialist</span>
+                        <img src="assets/icons/choose-a-specialist-grey.svg" alt="choose a specialist" id="chooseGrey" class="absolute left-4 top-1/2 z-20 -translate-y-1/2" />
+                        <img src="assets/icons/choose-a-specialist-black.svg" alt="choose a specialist" id="chooseBlack" class="absolute left-4 top-1/2 -translate-y-1/2" />
+                        <img id="arrow" src="assets/icons/arrow-right.svg" alt="arrow right" class="absolute right-4 top-1/2 -translate-y-1/2" />
+                        <span id="change" class="absolute right-4 top-1/2 hidden -translate-y-1/2 font-jakarta font-semibold leading-[20.16px] text-[#2C40FF]">Change</span>
+                    </button>
+                    <button type="submit" class="flex h-14 w-full items-center justify-center gap-[10px] rounded-[100px] bg-[#2C40FF]">
+                        <img src="assets/icons/search-doctor.svg" alt="" /><span class="font-jakarta font-bold leading-[20.16px] text-[#FFFFFF]">Search Doctor</span>
+                    </button>
+                </form>
+            </div>
+        </main>
+
+        <nav class="fixed bottom-0 left-0 right-0 z-30 mx-auto">
+            <div class="mx-auto max-w-[640px]">
+                <div class="flex items-center justify-between rounded-t-2xl border-t border-[#F7F8FA] bg-[#FFFFFF] px-4 py-6">
+                    <a href="/public/index.html" class="grid w-[112.33px] place-items-center gap-[6px]">
+                        <img src="assets/icons/home.svg" alt="home" />
+                        <p class="font-jakarta font-bold leading-[20.16px] text-[#2C40FF]">Home</p>
+                    </a>
+                    <a href="/public/doctor-search.html" class="grid w-[112.33px] place-items-center gap-[6px]">
+                        <img src="assets/icons/appointment.svg" alt="appointment" />
+                        <p class="text-center font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Appointment</p>
+                    </a>
+                    <a href="#" class="grid w-[112.33px] place-items-center gap-[6px]">
+                        <img src="assets/icons/my-booking.svg" alt="my my booking" />
+                        <p class="text-center font-jakarta font-semibold leading-[20.16px] text-[#757C98]">My Booking</p>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- modal -->
+        <div id="myModal" class="absolute left-4 right-4 top-12 z-50 hidden overflow-visible pb-[208px]">
+            <div class="h-[145px] rounded-t-3xl bg-[linear-gradient(100.99deg,_#277B53_0%,_#277B7B_100%)] px-4 pt-6">
+                <p class="text-center font-jakarta font-bold leading-[25.6px] text-[#FFFFFF]">SEHATMURAH provides experienced and trusted doctors.</p>
+            </div>
+            <!-- input radio -->
+            <div class="-mt-[45px] rounded-3xl bg-[#FFFFFF] px-4 py-8">
+                <h1 class="text-center font-jakarta text-xl font-bold leading-[25.2px] text-[#161616]">Select Specialist</h1>
+                <p class="mb-4 text-center font-jakarta font-semibold leading-[20.16px] text-[#AEB5FF]">6 Total Specialist</p>
+                <form id="radioForm" class="group">
+                    <!-- card1 -->
+                    <div class="w-full rounded-3xl border border-[#F1F1F1] p-4">
+                        <div class="flex items-center justify-between">
+                            <label class="flex items-center gap-3" for="obstetrics">
+                                <img src="assets/image/obstetrics-modal.png" alt="obstetrics" class="size-[70px]" />
+                                <div>
+                                    <h2 class="font-jakarta text-[18px] font-bold leading-[22.68px] text-[#161616]">Obstetrics</h2>
+                                    <p class="font-jakarta text-[16px] font-semibold leading-[20.16px] text-[#757C98]">230 doctors</p>
+                                </div>
+                            </label>
+                            <input type="radio" id="obstetrics" value="obstetrics" name="specialist" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
+                        </div>
+                    </div>
+                    <!-- card2 -->
+                    <div class="w-full rounded-3xl border border-[#F1F1F1] p-4">
+                        <div class="flex items-center justify-between">
+                            <label class="flex items-center gap-3" for="neurology">
+                                <img src="assets/image/neurology-modal.png" alt="neurology" class="size-[70px]" />
+                                <div>
+                                    <h2 class="font-jakarta text-[18px] font-bold leading-[22.68px] text-[#161616]">Neurology</h2>
+                                    <p class="font-jakarta text-[16px] font-semibold leading-[20.16px] text-[#757C98]">230 doctors</p>
+                                </div>
+                            </label>
+                            <input type="radio" id="neurology" value="neurology" name="specialist" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
+                        </div>
+                    </div>
+                    <!-- card3 -->
+                    <div class="w-full rounded-3xl border border-[#F1F1F1] p-4">
+                        <div class="flex items-center justify-between">
+                            <label class="flex items-center gap-3" for="ophthalmology">
+                                <img src="assets/image/ophthalmology-modal.png" alt="ophthalmology" class="size-[70px]" />
+                                <div>
+                                    <h2 class="font-jakarta text-[18px] font-bold leading-[22.68px] text-[#161616]">Ophthalmology</h2>
+                                    <p class="font-jakarta text-[16px] font-semibold leading-[20.16px] text-[#757C98]">230 doctors</p>
+                                </div>
+                            </label>
+                            <input type="radio" id="ophthalmology" value="ophthalmology" name="specialist" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
+                        </div>
+                    </div>
+                    <!-- card4 -->
+                    <div class="w-full rounded-3xl border border-[#F1F1F1] p-4">
+                        <div class="flex items-center justify-between">
+                            <label class="flex items-center gap-3" for="cardiology">
+                                <img src="assets/image/cardiology-modal.png" alt="cardiology" class="size-[70px]" />
+                                <div>
+                                    <h2 class="font-jakarta text-[18px] font-bold leading-[22.68px] text-[#161616]">Cardiology</h2>
+                                    <p class="font-jakarta text-[16px] font-semibold leading-[20.16px] text-[#757C98]">230 doctors</p>
+                                </div>
+                            </label>
+                            <input type="radio" id="cardiology" value="cardiology" name="specialist" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
+                        </div>
+                    </div>
+                    <!-- card5 -->
+                    <div class="w-full rounded-3xl border border-[#F1F1F1] p-4">
+                        <div class="flex items-center justify-between">
+                            <label class="flex items-center gap-3" for="pediatric">
+                                <img src="assets/image/pediatric-modal.png" alt="pediatric" class="size-[70px]" />
+                                <div>
+                                    <h2 class="font-jakarta text-[18px] font-bold leading-[22.68px] text-[#161616]">Pediatric</h2>
+                                    <p class="font-jakarta text-[16px] font-semibold leading-[20.16px] text-[#757C98]">230 doctors</p>
+                                </div>
+                            </label>
+                            <input type="radio" id="pediatric" value="pediatric" name="specialist" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
+                        </div>
+                    </div>
+                    <!-- card6 -->
+                    <div class="w-full rounded-3xl border border-[#F1F1F1] p-4">
+                        <div class="flex items-center justify-between">
+                            <label class="flex items-center gap-3" for="dermatology">
+                                <img src="assets/image/dermatology-modal.png" alt="dermatology" class="size-[70px]" />
+                                <div>
+                                    <h2 class="font-jakarta text-[18px] font-bold leading-[22.68px] text-[#161616]">Dermatology</h2>
+                                    <p class="font-jakarta text-[16px] font-semibold leading-[20.16px] text-[#757C98]">230 doctors</p>
+                                </div>
+                            </label>
+                            <input type="radio" id="dermatology" value="dermatology" name="specialist" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
+                        </div>
+                    </div>
+
+                    <!-- button cta-->
+                    <nav class="fixed bottom-0 left-0 right-0 z-30 mx-auto">
+                        <div class="mx-auto max-w-[640px]">
+                            <div class="flex h-[192px] w-full flex-col gap-y-4 rounded-t-3xl bg-[#FFFFFF] px-4 py-8">
+                                <button id="okButton" class="flex h-[56px] w-full items-center justify-center rounded-full bg-[#F1F1F1] text-center font-jakarta font-bold leading-[20.16px] text-[#FFFFFF] group-has-[:checked]:bg-[#2C40FF]">Continue</button>
+                                <button id="closeModal" class="flex h-[56px] w-full items-center justify-center rounded-full bg-[#2C40FF17] text-center font-jakarta font-bold leading-[20.16px] text-[#2C40FF]">Kembali</button>
+                            </div>
+                        </div>
+                    </nav>
+                </form>
+            </div>
+        </div>
+
+        <script type="module" src="docter-search.js"></script>
+    </body>
+</html>

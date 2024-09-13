@@ -1,4 +1,4 @@
-// swiper
+// SWIPER
 var categoriesSwiper = new Swiper(".categoriesSwiper", {
     slidesPerView: "auto", // Adjust number of slides based on card width
     freeMode: true,
@@ -14,7 +14,7 @@ var cardsSwiper = new Swiper(".cardsSwiper", {
     spaceBetween: 16,
 });
 
-// tabs
+// TABS
 const tabs = document.querySelectorAll(".tab-button");
 const contents = document.querySelectorAll(".content");
 
@@ -37,3 +37,5 @@ tabs.forEach((tab, index) => {
         contents[index].classList.add("flex");
     });
 });
+
+
