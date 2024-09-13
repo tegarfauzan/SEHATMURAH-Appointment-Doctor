@@ -9,6 +9,7 @@ const chooseGrey = document.getElementById("chooseGrey");
 const chooseBlack = document.getElementById("chooseBlack");
 const change = document.getElementById("change");
 const arrow = document.getElementById("arrow");
+const radioButtons = document.querySelectorAll('input[type="radio"]');
 
 // Open the modal
 openModalButton.addEventListener("click", () => {
@@ -33,12 +34,24 @@ okButton.addEventListener("click", () => {
         modal.classList.add("hidden");
         change.classList.remove("hidden");
         arrow.classList.add("hidden");
-    } else {
-        modal.classList.remove("hidden");
     }
 });
 
 // Prevent default browser validation behavior
 openModalButton.addEventListener("click", (event) => {
     event.preventDefault(); // Prevent the default form submission
+});
+
+
+// Fungsi untuk memeriksa apakah ada radio button yang tercentang
+function toggleButtonState() {
+  // Cek apakah salah satu radio button sudah tercentang
+  const isChecked = Array.from(radioButtons).some(radio => radio.checked);
+  // Aktifkan atau nonaktifkan tombol berdasarkan kondisi checked
+  okButton.disabled = !isChecked;
+}
+
+// Pantau perubahan pada setiap radio button
+radioButtons.forEach(radio => {
+  radio.addEventListener('change', toggleButtonState);
 });
