@@ -14,12 +14,12 @@
         <main class="mx-auto flex h-screen max-w-[640px] items-center justify-center px-4">
             <div class="my-auto w-full rounded-3xl bg-[#FFFFFF] px-4 py-8">
                 <div class="mb-8 grid justify-items-center">
-                    <img src="assets/icons/lets-make-appointment.svg" alt="let's make appointment" />
+                    <img src="assets/icons/lets-make-appointment.svg" alt="let's make appointment" class="mb-4"/>
                     <h1 class="font-jakarta text-2xl font-extrabold leading-[30.24px] text-[#161616]">Let’s Make Appointment</h1>
                 </div>
                 <form action="" class="w-full">
                     <!-- label1 -->
-                    <label for="city" class="font-jakarta font-semibold leading-[20.16px]">Which city are you in?</label>
+                    <label for="city" class="font-jakarta font-semibold text-[#757C98] leading-[20.16px]">Which city are you in?</label>
                     <div class="relative mb-6 mt-4">
                         <input
                             type="text"
@@ -33,7 +33,7 @@
                         <img src="assets/icons/enter-the-city-name-black.svg" alt="enter the city name" class="absolute left-4 top-1/2 -translate-y-1/2 peer-placeholder-shown:hidden" />
                     </div>
                     <!-- label2 -->
-                    <h3 class="font-jakarta font-semibold leading-[20.16px]">What Speciality you need?</h3>
+                    <h3 class="font-jakarta font-semibold leading-[20.16px] text-[#757C98]">What Speciality you need?</h3>
                     <button id="openModal" class="relative mb-8 mt-4 h-[56px] w-full rounded-full border border-[#F1F1F1] pl-12 text-start font-jakarta font-bold leading-[20.16px] text-[#757C98]">
                         <span id="selectedValue" class="">Choose a specialist</span>
                         <img src="assets/icons/choose-a-specialist-grey.svg" alt="choose a specialist" id="chooseGrey" class="absolute left-4 top-1/2 z-20 -translate-y-1/2" />
@@ -74,16 +74,16 @@
             </div>
             <!-- input radio -->
             <div class="-mt-[45px] rounded-3xl bg-[#FFFFFF] px-4 py-8">
-                <h1 class="text-center font-jakarta text-xl font-bold leading-[25.2px] text-[#161616]">Select Specialist</h1>
-                <p class="mb-4 text-center font-jakarta font-semibold leading-[20.16px] text-[#AEB5FF]">6 Total Specialist</p>
-                <form id="radioForm" class="group">
+                <h1 class="text-center font-jakarta text-xl font-bold leading-[25.2px] text-[#161616] mb-[3px]">Select Specialist</h1>
+                <p class="mb-4 text-center font-jakarta font-semibold leading-[20.16px] text-[#757C98]">6 Total Specialist</p>
+                <form id="radioForm" class="group gap-y-4">
                     <!-- card1 -->
                     <div class="w-full rounded-3xl border border-[#F1F1F1] p-4">
                         <div class="flex items-center justify-between">
                             <label class="flex items-center gap-3" for="obstetrics">
                                 <img src="assets/image/obstetrics-modal.png" alt="obstetrics" class="size-[70px]" />
                                 <div>
-                                    <h2 class="font-jakarta text-[18px] font-bold leading-[22.68px] text-[#161616]">Obstetrics</h2>
+                                    <h2 class="font-jakarta text-[18px] mb-[6px] font-bold leading-[22.68px] text-[#161616]">Obstetrics</h2>
                                     <p class="font-jakarta text-[16px] font-semibold leading-[20.16px] text-[#757C98]">230 doctors</p>
                                 </div>
                             </label>
@@ -96,7 +96,7 @@
                             <label class="flex items-center gap-3" for="neurology">
                                 <img src="assets/image/neurology-modal.png" alt="neurology" class="size-[70px]" />
                                 <div>
-                                    <h2 class="font-jakarta text-[18px] font-bold leading-[22.68px] text-[#161616]">Neurology</h2>
+                                    <h2 class="font-jakarta mb-[6px] text-[18px] font-bold leading-[22.68px] text-[#161616]">Neurology</h2>
                                     <p class="font-jakarta text-[16px] font-semibold leading-[20.16px] text-[#757C98]">230 doctors</p>
                                 </div>
                             </label>
@@ -109,7 +109,7 @@
                             <label class="flex items-center gap-3" for="ophthalmology">
                                 <img src="assets/image/ophthalmology-modal.png" alt="ophthalmology" class="size-[70px]" />
                                 <div>
-                                    <h2 class="font-jakarta text-[18px] font-bold leading-[22.68px] text-[#161616]">Ophthalmology</h2>
+                                    <h2 class="mb-[6px] font-jakarta text-[18px] font-bold leading-[22.68px] text-[#161616]">Ophthalmology</h2>
                                     <p class="font-jakarta text-[16px] font-semibold leading-[20.16px] text-[#757C98]">230 doctors</p>
                                 </div>
                             </label>
@@ -122,7 +122,7 @@
                             <label class="flex items-center gap-3" for="cardiology">
                                 <img src="assets/image/cardiology-modal.png" alt="cardiology" class="size-[70px]" />
                                 <div>
-                                    <h2 class="font-jakarta text-[18px] font-bold leading-[22.68px] text-[#161616]">Cardiology</h2>
+                                    <h2 class="mb-[6px] font-jakarta text-[18px] font-bold leading-[22.68px] text-[#161616]">Cardiology</h2>
                                     <p class="font-jakarta text-[16px] font-semibold leading-[20.16px] text-[#757C98]">230 doctors</p>
                                 </div>
                             </label>
@@ -135,7 +135,7 @@
                             <label class="flex items-center gap-3" for="pediatric">
                                 <img src="assets/image/pediatric-modal.png" alt="pediatric" class="size-[70px]" />
                                 <div>
-                                    <h2 class="font-jakarta text-[18px] font-bold leading-[22.68px] text-[#161616]">Pediatric</h2>
+                                    <h2 class="mb-[6px] font-jakarta text-[18px] font-bold leading-[22.68px] text-[#161616]">Pediatric</h2>
                                     <p class="font-jakarta text-[16px] font-semibold leading-[20.16px] text-[#757C98]">230 doctors</p>
                                 </div>
                             </label>
@@ -148,7 +148,7 @@
                             <label class="flex items-center gap-3" for="dermatology">
                                 <img src="assets/image/dermatology-modal.png" alt="dermatology" class="size-[70px]" />
                                 <div>
-                                    <h2 class="font-jakarta text-[18px] font-bold leading-[22.68px] text-[#161616]">Dermatology</h2>
+                                    <h2 class="mb-[6px] font-jakarta text-[18px] font-bold leading-[22.68px] text-[#161616]">Dermatology</h2>
                                     <p class="font-jakarta text-[16px] font-semibold leading-[20.16px] text-[#757C98]">230 doctors</p>
                                 </div>
                             </label>

@@ -34,7 +34,7 @@ okButton.addEventListener("click", () => {
         change.classList.remove("hidden");
         arrow.classList.add("hidden");
     } else {
-        alert("Please select an option.");
+        modal.classList.remove("hidden");
     }
 });
 
