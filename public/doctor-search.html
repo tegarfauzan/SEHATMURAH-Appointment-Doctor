@@ -21,15 +21,6 @@
                     <!-- label1 -->
                     <label for="city" class="font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Which city are you in?</label>
                     <div class="relative mb-6 mt-4">
-                        <!-- <input
-                            type="text"
-                            id="city"
-                            placeholder="Enter the city name"
-                            class="peer h-[56px] w-full rounded-[100px] border border-[#F1F1F1] pl-12 font-jakarta font-bold leading-[20.16px] text-[#161616] placeholder:font-jakarta placeholder:font-semibold placeholder:leading-[20.16px] placeholder:text-[#757C98] focus:outline-none"
-                            autocomplete="off"
-                            required
-                        /> -->
-                        <!-- select -->
                         <select required class="peer h-[56px] w-full appearance-none rounded-[100px] border border-[#F1F1F1] pl-12 font-jakarta font-semibold leading-[20.16px] text-[#757C98] focus:outline-none">
                             <option value="" disabled selected>Enter the city name</option>
                             <option value="option1">Buitenzorg</option>
@@ -54,28 +45,10 @@
                     </button>
                 </form>
             </div>
-        </main>
 
-        <nav class="fixed bottom-0 left-0 right-0 z-30 mx-auto">
-            <div class="mx-auto max-w-[640px]">
-                <div class="flex items-center justify-between rounded-t-2xl border-t border-[#F7F8FA] bg-[#FFFFFF] px-4 py-6">
-                    <a href="index.html" class="grid w-[112.33px] place-items-center gap-[6px]">
-                        <img src="assets/icons/home-nav-grey.svg" alt="home" />
-                        <p class="font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Home</p>
-                    </a>
-                    <a href="doctor-search.html" class="grid w-[112.33px] place-items-center gap-[6px]">
-                        <img src="assets/icons/appointment-nav-blue.svg" alt="appointment" />
-                        <p class="font-jakarta font-bold leading-[20.16px] text-[#2C40FF]">Appointment</p>
-                    </a>
-                    <a href="#" class="grid w-[112.33px] place-items-center gap-[6px]">
-                        <img src="assets/icons/my-booking.svg" alt="my my booking" />
-                        <p class="font-jakarta font-semibold leading-[20.16px] text-[#757C98]">My Booking</p>
-                    </a>
-                </div>
-            </div>
-        </nav>
 
-        <!-- modal -->
+
+            <!-- modal -->
         <div id="myModal" class="absolute left-4 right-4 top-12 z-50 hidden pb-[208px]">
             <div class="h-[145px] rounded-t-3xl bg-[linear-gradient(100.99deg,_#277B53_0%,_#277B7B_100%)] px-4 pt-6">
                 <p class="text-center font-jakarta font-bold leading-[25.6px] text-[#FFFFFF]">SEHATMURAH provides experienced and trusted doctors.</p>
@@ -176,6 +149,28 @@
                 </form>
             </div>
         </div>
+        </main>
+
+        <nav class="fixed bottom-0 left-0 right-0 z-30 mx-auto">
+            <div class="mx-auto max-w-[640px]">
+                <div class="flex items-center justify-between rounded-t-2xl border-t border-[#F7F8FA] bg-[#FFFFFF] px-4 py-6">
+                    <a href="index.html" class="grid w-[112.33px] place-items-center gap-[6px]">
+                        <img src="assets/icons/home-nav-grey.svg" alt="home" />
+                        <p class="font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Home</p>
+                    </a>
+                    <a href="doctor-search.html" class="grid w-[112.33px] place-items-center gap-[6px]">
+                        <img src="assets/icons/appointment-nav-blue.svg" alt="appointment" />
+                        <p class="font-jakarta font-bold leading-[20.16px] text-[#2C40FF]">Appointment</p>
+                    </a>
+                    <a href="#" class="grid w-[112.33px] place-items-center gap-[6px]">
+                        <img src="assets/icons/my-booking.svg" alt="my my booking" />
+                        <p class="font-jakarta font-semibold leading-[20.16px] text-[#757C98]">My Booking</p>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        
 
         <script type="module" src="docter-search.js"></script>
     </body>
