@@ -13,29 +13,37 @@
     <body class="bg-[#F7F8FA]">
         <main class="mx-auto flex h-screen max-w-[640px] items-center justify-center px-4">
             <div class="my-auto w-full rounded-3xl bg-[#FFFFFF] px-4 py-8">
-                <div class="mb-8 grid justify-items-center">
-                    <img src="assets/icons/lets-make-appointment.svg" alt="let's make appointment" class="mb-4" />
-                    <h1 class="font-jakarta text-2xl font-extrabold leading-[30.24px] text-[#161616]">Let’s Make Appointment</h1>
-                </div>
                 <form action="" class="w-full">
+                    <div class="mb-8 grid justify-items-center">
+                        <img src="assets/icons/lets-make-appointment.svg" alt="let's make appointment" class="mb-4" />
+                        <h1 class="font-jakarta text-2xl font-extrabold leading-[30.24px] text-[#161616]">Let’s Make Appointment</h1>
+                    </div>
                     <!-- label1 -->
                     <label for="city" class="font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Which city are you in?</label>
                     <div class="relative mb-6 mt-4">
-                        <input
+                        <!-- <input
                             type="text"
                             id="city"
                             placeholder="Enter the city name"
                             class="peer h-[56px] w-full rounded-[100px] border border-[#F1F1F1] pl-12 font-jakarta font-bold leading-[20.16px] text-[#161616] placeholder:font-jakarta placeholder:font-semibold placeholder:leading-[20.16px] placeholder:text-[#757C98] focus:outline-none"
                             autocomplete="off"
                             required
-                        />
-                        <img src="assets/icons/enter-the-city-name-grey.svg" alt="enter the city name" class="absolute left-4 top-1/2 -translate-y-1/2" />
-                        <img src="assets/icons/enter-the-city-name-black.svg" alt="enter the city name" class="absolute left-4 top-1/2 -translate-y-1/2 peer-placeholder-shown:hidden" />
+                        /> -->
+                        <!-- select -->
+                        <select required class="peer h-[56px] w-full appearance-none rounded-[100px] border border-[#F1F1F1] pl-12 font-jakarta font-semibold leading-[20.16px] text-[#757C98] focus:outline-none">
+                            <option value="" disabled selected>Enter the city name</option>
+                            <option value="option1">Buitenzorg</option>
+                            <option value="option2">Surabaya</option>
+                            <option value="option3">Jakarta</option>
+                        </select>
+
+                        <img src="assets/icons/enter-the-city-name-grey.svg" alt="enter the city name" class="absolute left-4 top-1/2 hidden -translate-y-1/2 peer-invalid:block" />
+                        <img src="assets/icons/enter-the-city-name-black.svg" alt="enter the city name" class="absolute left-4 top-1/2 hidden -translate-y-1/2 peer-valid:block" />
                     </div>
                     <!-- label2 -->
                     <h3 class="font-jakarta font-semibold leading-[20.16px] text-[#757C98]">What Speciality you need?</h3>
                     <button id="openModal" class="relative mb-8 mt-4 h-[56px] w-full rounded-full border border-[#F1F1F1] pl-12 text-start font-jakarta font-bold leading-[20.16px] text-[#757C98]">
-                        <span id="selectedValue" class="">Choose a specialist</span>
+                        <span id="selectedValue">Choose a specialist</span>
                         <img src="assets/icons/choose-a-specialist-grey.svg" alt="choose a specialist" id="chooseGrey" class="absolute left-4 top-1/2 z-20 -translate-y-1/2" />
                         <img src="assets/icons/choose-a-specialist-black.svg" alt="choose a specialist" id="chooseBlack" class="absolute left-4 top-1/2 -translate-y-1/2" />
                         <img id="arrow" src="assets/icons/arrow-right.svg" alt="arrow right" class="absolute right-4 top-1/2 -translate-y-1/2" />
@@ -57,11 +65,11 @@
                     </a>
                     <a href="doctor-search.html" class="grid w-[112.33px] place-items-center gap-[6px]">
                         <img src="assets/icons/appointment-nav-blue.svg" alt="appointment" />
-                        <p class="text-center font-jakarta font-bold leading-[20.16px] text-[#2C40FF]">Appointment</p>
+                        <p class="font-jakarta font-bold leading-[20.16px] text-[#2C40FF]">Appointment</p>
                     </a>
                     <a href="#" class="grid w-[112.33px] place-items-center gap-[6px]">
                         <img src="assets/icons/my-booking.svg" alt="my my booking" />
-                        <p class="text-center font-jakarta font-semibold leading-[20.16px] text-[#757C98]">My Booking</p>
+                        <p class="font-jakarta font-semibold leading-[20.16px] text-[#757C98]">My Booking</p>
                     </a>
                 </div>
             </div>
