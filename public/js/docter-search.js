@@ -15,11 +15,17 @@ const radioButtons = document.querySelectorAll('input[type="radio"]');
 // Select element
 for (let i = 0; i < select.length; i++) {
     select[i].addEventListener("change", function () {
+        console.log(this.value);
         if (this.value) {
             this.classList.remove("text-[#757C98]");
             this.classList.remove("font-semibold");
             this.classList.add("font-bold");
             this.classList.add("text-[#161616]");
+        } else {
+            this.classList.remove("text-[#161616]");
+            this.classList.remove("font-bold");
+            this.classList.add("font-semibold");
+            this.classList.add("text-[#757C98]");
         }
     });
 }
