@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ["./doctor-search.html" ,"./public/**/*.{html,js}"],
+    content: ["./public/**/*.{html,js}"],
     theme: {
         extend: {
             fontFamily: {
