@@ -3,7 +3,7 @@ const openModalButton = document.getElementById("openModal");
 const closeModalButton = document.getElementById("closeModal");
 const okButton = document.getElementById("okButton");
 const modal = document.getElementById("myModal");
-const radioForm = document.getElementById("radioForm");
+const radioInput = document.getElementById("radioInput");
 const selectValue = document.getElementById("selectedValue");
 const chooseGrey = document.getElementById("chooseGrey");
 const chooseBlack = document.getElementById("chooseBlack");
@@ -36,7 +36,7 @@ closeModalButton.addEventListener("click", () => {
 
 // OK button logic
 okButton.addEventListener("click", () => {
-    const selectedRadio = radioForm.querySelector('input[name="specialist"]:checked');
+    const selectedRadio = radioInput.querySelector('input[name="specialist"]:checked');
     if (selectedRadio) {
         event.preventDefault();
         // Get the value of the selected radio button
