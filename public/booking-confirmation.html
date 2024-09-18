@@ -63,7 +63,8 @@
                 </div>
                 <form action="" method="post">
                     <div>
-                        <section class="w-full mb-4 space-y-6 rounded-3xl bg-[#FFFFFF] px-4 py-8">
+                        <!-- make appointment -->
+                        <section class="mb-4 w-full space-y-6 rounded-3xl bg-[#FFFFFF] px-4 py-8">
                             <h2 class="font-jakarta text-xl font-bold leading-[25.2px] text-[#161616]">Make Appointment</h2>
                             <div class="flex w-full items-center justify-between rounded-3xl border border-[#F1F1F1] bg-[#2C40FF08] p-6">
                                 <div>
@@ -74,60 +75,102 @@
                             </div>
                             <div>
                                 <p class="mb-4 font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Set the appointment time.</p>
-                                <label class="group mb-3 flex items-center justify-between rounded-full border border-[#F1F1F1] p-4 text-[#757C98] has-[:checked]:bg-[#2C40FF08] has-[:checked]:border-[#2C40FF] has-[:checked]:text-[#2C40FF]">
+                                <label class="group mb-3 flex items-center justify-between rounded-full border border-[#F1F1F1] p-4 text-[#757C98] has-[:checked]:border-[#2C40FF] has-[:checked]:bg-[#2C40FF08] has-[:checked]:text-[#2C40FF]">
                                     <div class="flex items-center gap-[10px]">
-                                        <img src="assets/image/clock-nonactive.png" alt="clock nonactive" class="group-has-[:checked]:hidden size-6" />
-                                        <img src="assets/image/clock-active.png" alt="clock active" class="hidden group-has-[:checked]:block size-6" />
+                                        <img src="assets/image/clock-nonactive.png" alt="clock nonactive" class="size-6 group-has-[:checked]:hidden" />
+                                        <img src="assets/image/clock-active.png" alt="clock active" class="hidden size-6 group-has-[:checked]:block" />
                                         <p class="font-jakarta font-semibold leading-[20.16px]">09:30 AM - 10:30 AM</p>
                                     </div>
-                                    <input type="radio" value="09:30 AM - 10:30 AM" name="appointment time" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
+                                    <input id="09:30AM-10:30AM" type="radio" value="09:30 AM - 10:30 AM" name="appointment time" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
                                 </label>
-                                <label class="group mb-3 flex items-center justify-between rounded-full border border-[#F1F1F1] p-4 text-[#757C98] has-[:checked]:bg-[#2C40FF08] has-[:checked]:border-[#2C40FF] has-[:checked]:text-[#2C40FF]">
+                                <label class="group mb-3 flex items-center justify-between rounded-full border border-[#F1F1F1] p-4 text-[#757C98] has-[:checked]:border-[#2C40FF] has-[:checked]:bg-[#2C40FF08] has-[:checked]:text-[#2C40FF]">
                                     <div class="flex items-center gap-[10px]">
-                                        <img src="assets/image/clock-nonactive.png" alt="clock nonactive" class="group-has-[:checked]:hidden size-6" />
-                                        <img src="assets/image/clock-active.png" alt="clock active" class="hidden group-has-[:checked]:block size-6" />
+                                        <img src="assets/image/clock-nonactive.png" alt="clock nonactive" class="size-6 group-has-[:checked]:hidden" />
+                                        <img src="assets/image/clock-active.png" alt="clock active" class="hidden size-6 group-has-[:checked]:block" />
                                         <p class="font-jakarta font-semibold leading-[20.16px]">13:00 PM - 13:30 PM</p>
                                     </div>
-                                    <input type="radio" value="13:00 PM - 13:30 PM" name="appointment time" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
+                                    <input id="13:00PM-13:30PM" type="radio" value="13:00 PM - 13:30 PM" name="appointment time" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
                                 </label>
-                                <label class="group flex items-center justify-between rounded-full border border-[#F1F1F1] p-4 text-[#757C98] has-[:checked]:bg-[#2C40FF08] has-[:checked]:border-[#2C40FF] has-[:checked]:text-[#2C40FF]">
+                                <label class="group flex items-center justify-between rounded-full border border-[#F1F1F1] p-4 text-[#757C98] has-[:checked]:border-[#2C40FF] has-[:checked]:bg-[#2C40FF08] has-[:checked]:text-[#2C40FF]">
                                     <div class="flex items-center gap-[10px]">
-                                        <img src="assets/image/clock-nonactive.png" alt="clock nonactive" class="group-has-[:checked]:hidden size-6" />
-                                        <img src="assets/image/clock-active.png" alt="clock active" class="hidden group-has-[:checked]:block size-6" />
+                                        <img src="assets/image/clock-nonactive.png" alt="clock nonactive" class="size-6 group-has-[:checked]:hidden" />
+                                        <img src="assets/image/clock-active.png" alt="clock active" class="hidden size-6 group-has-[:checked]:block" />
                                         <p class="font-jakarta font-semibold leading-[20.16px]">14:00 PM - 15:00PM</p>
                                     </div>
-                                    <input type="radio" value="14:00 PM - 15:00PM" name="appointment time" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
+                                    <input id="14:00PM-15:00PM" type="radio" value="14:00 PM - 15:00PM" name="appointment time" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
                                 </label>
                             </div>
                         </section>
+                        <!-- Patient Data -->
                         <section class="w-full rounded-3xl bg-[#FFFFFF] px-4 py-8">
-                            <h2 class="font-jakarta mb-6 text-xl font-bold leading-[25.2px] text-[#161616]">Patient Data</h2>
-                            <label>
+                            <h2 class="mb-6 font-jakarta text-xl font-bold leading-[25.2px] text-[#161616]">Patient Data</h2>
+                            <label class="mb-6 block">
                                 <p class="mb-3 font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Name Of Patient</p>
-                                <div class="relative w-full rounded-full border border-[#F1F1F1] h-[56px]">
-                                <input type="text" class="font-jakarta peer font-bold leading-[20.16px] text-[#161616] w-full h-full focus:outline-none rounded-full pl-12 placeholder:font-jakarta placeholder:font-bold placeholder:leading-[20.16px] placeholder:text-[#757C98]" placeholder="Patient Full Name">
-                                <img src="assets/icons/people-nonactive.svg" alt="people nonactive" class="absolute left-4 top-1/2 -translate-y-1/2">
-                                <img src="assets/icons/people-active.svg" alt="people active" class="absolute left-4 top-1/2 -translate-y-1/2 peer-placeholder-shown:hidden z-10">
+                                <div class="relative h-[56px] w-full rounded-full border border-[#F1F1F1]">
+                                    <input
+                                        type="text"
+                                        class="peer h-full w-full rounded-full pl-12 font-jakarta font-bold leading-[20.16px] text-[#161616] placeholder:font-jakarta placeholder:font-bold placeholder:leading-[20.16px] placeholder:text-[#757C98] focus:outline-none"
+                                        placeholder="Patient Full Name"
+                                    />
+                                    <img src="assets/icons/people-nonactive.svg" alt="people nonactive" class="absolute left-4 top-1/2 -translate-y-1/2" />
+                                    <img src="assets/icons/people-active.svg" alt="people active" class="absolute left-4 top-1/2 z-10 -translate-y-1/2 peer-placeholder-shown:hidden" />
                                 </div>
                             </label>
+                            <!-- age -->
+                            <div class="mb-6">
+                                <p class="mb-3 font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Age</p>
+                                <label class="counter flex h-[56px] w-full items-center justify-between rounded-full border border-[#F1F1F1] p-4">
+                                    <button class="decrement"><img src="assets/icons/decrement.svg" alt="decrement" /></button>
+                                    <input type="text" name="age" id="count" value="Years Old" class="text-center font-jakarta font-bold leading-[20.16px] text-[#757C98] outline-none" />
+                                    <button class="increment"><img src="assets/icons/increment.svg" alt="increment" /></button>
+                                </label>
+                            </div>
+                            <!-- gender -->
+                            <div>
+                                <p class="mb-3 font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Gender</p>
+                                <div class="counter flex w-full items-center gap-2">
+                                    <!-- woman -->
+                                    <label class="w-full rounded-full border border-[#F1F1F1] p-4 has-[:checked]:border-[1.5px] has-[:checked]:border-[#2C40FF] has-[:checked]:bg-[#2C40FF08]">
+                                        <div class="group flex items-center justify-between">
+                                            <div class="mr-2 flex items-center">
+                                                <img src="assets/icons/woman-nonactive.svg" alt="woman nonactive" class="mr-2 group-has-[:checked]:hidden" />
+                                                <img src="assets/icons/woman-active.svg" alt="woman active" class="mr-2 hidden group-has-[:checked]:block" />
+                                                <p class="font-jakarta font-bold leading-[20.16px] text-[#757C98] group-has-[:checked]:text-[#2C40FF]">Woman</p>
+                                            </div>
+                                            <input type="radio" value="woman" name="gender" id="woman" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
+                                        </div>
+                                    </label>
+                                    <!-- man -->
+                                    <label class="w-full rounded-full border border-[#F1F1F1] p-4 has-[:checked]:border-[1.5px] has-[:checked]:border-[#2C40FF] has-[:checked]:bg-[#2C40FF08]">
+                                        <div class="group flex items-center justify-between">
+                                            <div class="mr-2 flex items-center">
+                                                <img src="assets/icons/man-nonactive.svg" alt="man nonactive" class="mr-2 group-has-[:checked]:hidden" />
+                                                <img src="assets/icons/man-active.svg" alt="man active" class="mr-2 hidden group-has-[:checked]:block" />
+                                                <p class="font-jakarta font-bold leading-[20.16px] text-[#757C98] group-has-[:checked]:text-[#2C40FF]">Man</p>
+                                            </div>
+                                            <input type="radio" value="man" name="gender" id="man" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
                         </section>
                     </div>
-                </form>
 
-                <!-- cta -->
-                <nav class="fixed bottom-0 left-0 right-0 z-30">
-                    <div class="mx-auto max-w-[640px]">
-                        <div class="flex h-[120px] w-full items-center justify-between space-x-2 rounded-t-3xl bg-[#FFFFFF] px-4">
-                            <div>
-                                <p class="mb-[2px] whitespace-nowrap font-jakarta text-[24px] font-bold leading-[30.24px] text-[#FF5050]">Rp 240.000</p>
-                                <p class="font-jakarta font-semibold leading-[20.16px] text-[#757C98]">/hour</p>
+                    <!-- cta -->
+                    <nav class="fixed bottom-0 left-0 right-0 z-30">
+                        <div class="mx-auto max-w-[640px]">
+                            <div class="flex h-[120px] w-full items-center justify-between space-x-2 rounded-t-3xl bg-[#FFFFFF] px-4">
+                                <div>
+                                    <p class="mb-[2px] whitespace-nowrap font-jakarta text-[24px] font-bold leading-[30.24px] text-[#FF5050]">Rp 240.000</p>
+                                    <p class="font-jakarta font-semibold leading-[20.16px] text-[#757C98]">/hour</p>
+                                </div>
+                                <a href="payment-details.html" class="flex h-[52px] w-[180px] items-center justify-center rounded-[100px] bg-[#2C40FF] font-jakarta font-bold leading-[20.16px] text-[#FFFFFF]">Continue</a>
                             </div>
-                            <a href="payment-details.html" class="flex h-[52px] w-[180px] items-center justify-center rounded-[100px] bg-[#2C40FF] font-jakarta font-bold leading-[20.16px] text-[#FFFFFF]">Continue</a>
                         </div>
-                    </div>
-                </nav>
+                    </nav>
+                </form>
             </section>
         </main>
-        <script type="module" src="js/search-result.js"></script>
+        <script type="module" src="js/booking-confirmation.js"></script>
     </body>
 </html>
