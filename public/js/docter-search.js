@@ -1,6 +1,6 @@
 // MODAL
-const openModalButton = document.getElementById("openModal");
-const closeModalButton = document.getElementById("closeModal");
+const openButton = document.getElementById("openModal");
+const closeButton = document.getElementById("closeModal");
 const okButton = document.getElementById("okButton");
 const modal = document.getElementById("myModal");
 const radioInput = document.getElementById("radioInput");
@@ -13,10 +13,11 @@ const form = document.getElementById("form");
 const select = document.getElementsByTagName("select");
 const radioButtons = document.querySelectorAll('input[type="radio"]');
 
-// Select element
+// Select options
 for (let i = 0; i < select.length; i++) {
     select[i].addEventListener("change", function () {
         if (this.value) {
+            localStorage.setItem("option", this.value);
             this.classList.remove("text-[#757C98]");
             this.classList.remove("font-semibold");
             this.classList.add("font-bold");
@@ -30,49 +31,38 @@ for (let i = 0; i < select.length; i++) {
     });
 }
 
-// Open the modal
-openModalButton.addEventListener("click", () => {
+// OPEN modal
+openButton.addEventListener("click", (event) => {
+    event.preventDefault();
     const currentValue = selectedValue.getAttribute("data-value");
     form.classList.add("hidden");
-    // Check if there's a value stored in data-value
     if (currentValue) {
-        // Find the radio input with the value equal to currentValue
         const radioToCheck = document.querySelector(`input[name="specialist"][value="${currentValue}"]`);
-
         if (radioToCheck) {
-            // Set the radio button as checked
             radioToCheck.checked = true;
         }
     }
     modal.classList.remove("hidden");
 });
 
-// Close the modal
-closeModalButton.addEventListener("click", () => {
-    event.preventDefault();
-    form.classList.remove("hidden");
-
-    // Find all radio inputs with name "specialist"
-    const radioInputs = document.querySelectorAll('input[name="specialist"]');
-    if (selectedValue.innerHTML == "Choose a specialist") {
-        // Loop through each radio input and uncheck it
-        radioInputs.forEach((radio) => {
-            radio.checked = false;
-        });
-    }
-
-    modal.classList.add("hidden");
+// RADIO BUTTONS active nonactive
+function toggleButtonState() {
+    const isChecked = Array.from(radioButtons).some((radio) => radio.checked);
+    okButton.disabled = !isChecked;
+}
+radioButtons.forEach((radio) => {
+    radio.addEventListener("change", toggleButtonState);
 });
 
-// OK button logic
-okButton.addEventListener("click", () => {
+// OK modal
+okButton.addEventListener("click", (event) => {
     const selectedRadio = radioInput.querySelector('input[name="specialist"]:checked');
     form.classList.remove("hidden");
     if (selectedRadio) {
         event.preventDefault();
-        // Get the value of the selected radio button
         const selectedValue = selectedRadio.value;
         selectValue.setAttribute("data-value", selectedValue);
+        localStorage.setItem("data-value", selectedValue);
         selectValue.innerHTML = selectedValue;
         selectValue.classList.add("text-[#161616]");
         chooseGrey.classList.add("hidden");
@@ -82,20 +72,41 @@ okButton.addEventListener("click", () => {
     }
 });
 
-// Prevent default browser validation behavior
-openModalButton.addEventListener("click", (event) => {
-    event.preventDefault(); // Prevent the default form submission
+// CANCEL modal
+closeButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    form.classList.remove("hidden");
+
+    const radioInputs = document.querySelectorAll('input[name="specialist"]');
+    if (selectedValue.innerHTML == "Choose a specialist") {
+        radioInputs.forEach((radio) => {
+            radio.checked = false;
+        });
+    }
+    modal.classList.add("hidden");
 });
 
-// Fungsi untuk memeriksa apakah ada radio button yang tercentang
-function toggleButtonState() {
-    // Cek apakah salah satu radio button sudah tercentang
-    const isChecked = Array.from(radioButtons).some((radio) => radio.checked);
-    // Aktifkan atau nonaktifkan tombol berdasarkan kondisi checked
-    okButton.disabled = !isChecked;
-}
+// simpanan sementara localstorage
+document.addEventListener("DOMContentLoaded", function () {
+    const option = localStorage.getItem("option");
+    const dataValue = localStorage.getItem("data-value");
+    const selectElement = document.querySelector("#mySelect");
+    const openModal = document.querySelector("#openModal");
 
-// Pantau perubahan pada setiap radio button
-radioButtons.forEach((radio) => {
-    radio.addEventListener("change", toggleButtonState);
+    if (option && selectElement) {
+        selectElement.value = option;
+        selectElement.classList.remove("text-[#757C98]");
+        selectElement.classList.remove("font-semibold");
+        selectElement.classList.add("font-bold");
+        selectElement.classList.add("text-[#161616]");
+    }
+    if (dataValue && openModal) {
+        openModal.setAttribute("data-value", dataValue);
+        selectedValue.innerHTML = dataValue;
+        selectValue.classList.add("text-[#161616]");
+        chooseGrey.classList.add("hidden");
+        modal.classList.add("hidden");
+        change.classList.remove("hidden");
+        arrow.classList.add("hidden");
+    }
 });
