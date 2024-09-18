@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- plus jakarta sans -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
+        <link href="./dist/output.css" rel="stylesheet" />
+        <title>Booking Confirmation</title>
+    </head>
+    <body class="bg-[#F7F8FA]">
+        <main class="relative mx-auto max-w-[640px] pb-[120px]">
+            <header class="h-[268px] w-full rounded-b-2xl bg-[#2C40FF] px-4 pt-12">
+                <a href="doctor-details.html">
+                    <img src="assets/icons/arrow-left-blue.svg" alt="arrow left" />
+                </a>
+                <div class="absolute left-1/2 top-12 -translate-x-1/2">
+                    <h1 class="mb-[3px] whitespace-nowrap text-center font-jakarta text-xl font-bold leading-[25.2px] text-[#FFFFFF]">Appointment Details</h1>
+                    <p class="whitespace-nowrap text-center font-jakarta font-semibold leading-[20.16px] text-[#AEB5FF]">Set your appointment schedule</p>
+                </div>
+            </header>
+            <section class="-mt-[140px] w-full space-y-4 pb-4">
+                <!-- cart -->
+                <div class="mx-4 space-y-5 rounded-3xl bg-[#FFFFFF] p-5">
+                    <div class="flex items-center gap-x-[12px]">
+                        <div class="relative h-[120px] w-[100px]">
+                            <img class="rounded-ee-md rounded-es-3xl rounded-se-3xl rounded-ss-md bg-[#F2F2F2] object-cover" src="assets/image/Dr. Raze Invoker.png" alt="Dr. Raze Invoker" />
+                            <img class="absolute left-2 top-2" src="assets/icons/alert-online.svg" alt="alert online" />
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="font-jakarta font-bold leading-[20.16px] text-[#2C40FF]">Radiant Hospital</h3>
+                            <h2 class="font-jakarta text-lg font-bold leading-[22.68px] text-[#161616]">Dr. Raze Invoker</h2>
+                            <p class="font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Internist Specialist</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-evenly rounded-2xl border border-[#F1F1F1] py-4">
+                        <div class="grid w-[80.33px] place-items-center">
+                            <div class="mb-1 flex gap-[2px]">
+                                <img src="assets/icons/verify.svg" alt="verify" />
+                                <h4 class="font-jakarta font-bold leading-[20.16px] text-[#161616]">Verify</h4>
+                            </div>
+                            <p class="font-jakarta text-sm font-semibold leading-[17.64px] text-[#757C98]">Certified</p>
+                        </div>
+                        <img src="assets/icons/line-vertical.svg" alt="line vertical" />
+                        <div class="grid w-[80.33px] place-items-center">
+                            <div class="mb-1 flex gap-[2px]">
+                                <img src="assets/icons/5-years.svg" alt="5 years" />
+                                <h4 class="font-jakarta font-bold leading-[20.16px] text-[#161616]">5 Years</h4>
+                            </div>
+                            <p class="font-jakarta text-sm font-semibold leading-[17.64px] text-[#757C98]">Experience</p>
+                        </div>
+                        <img src="assets/icons/line-vertical.svg" alt="line vertical" />
+                        <div class="grid w-[80.33px] place-items-center">
+                            <div class="mb-1 flex gap-[2px]">
+                                <img src="assets/icons/4.5.svg" alt="verify" />
+                                <h4 class="font-jakarta font-bold leading-[20.16px] text-[#161616]">4.5</h4>
+                            </div>
+                            <p class="font-jakarta text-sm font-semibold leading-[17.64px] text-[#757C98]">Rating</p>
+                        </div>
+                    </div>
+                </div>
+                <form action="" method="post">
+                    <div>
+                        <section class="w-full mb-4 space-y-6 rounded-3xl bg-[#FFFFFF] px-4 py-8">
+                            <h2 class="font-jakarta text-xl font-bold leading-[25.2px] text-[#161616]">Make Appointment</h2>
+                            <div class="flex w-full items-center justify-between rounded-3xl border border-[#F1F1F1] bg-[#2C40FF08] p-6">
+                                <div>
+                                    <h3 class="mb-[2px] font-jakarta text-lg font-bold leading-[22.68px] text-[#161616]">31 Aug 2024</h3>
+                                    <p class="font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Doctor Available</p>
+                                </div>
+                                <img src="assets/icons/doctor-available.svg" alt="doctor available" />
+                            </div>
+                            <div>
+                                <p class="mb-4 font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Set the appointment time.</p>
+                                <label class="group mb-3 flex items-center justify-between rounded-full border border-[#F1F1F1] p-4 text-[#757C98] has-[:checked]:bg-[#2C40FF08] has-[:checked]:border-[#2C40FF] has-[:checked]:text-[#2C40FF]">
+                                    <div class="flex items-center gap-[10px]">
+                                        <img src="assets/image/clock-nonactive.png" alt="clock nonactive" class="group-has-[:checked]:hidden size-6" />
+                                        <img src="assets/image/clock-active.png" alt="clock active" class="hidden group-has-[:checked]:block size-6" />
+                                        <p class="font-jakarta font-semibold leading-[20.16px]">09:30 AM - 10:30 AM</p>
+                                    </div>
+                                    <input type="radio" value="09:30 AM - 10:30 AM" name="appointment time" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
+                                </label>
+                                <label class="group mb-3 flex items-center justify-between rounded-full border border-[#F1F1F1] p-4 text-[#757C98] has-[:checked]:bg-[#2C40FF08] has-[:checked]:border-[#2C40FF] has-[:checked]:text-[#2C40FF]">
+                                    <div class="flex items-center gap-[10px]">
+                                        <img src="assets/image/clock-nonactive.png" alt="clock nonactive" class="group-has-[:checked]:hidden size-6" />
+                                        <img src="assets/image/clock-active.png" alt="clock active" class="hidden group-has-[:checked]:block size-6" />
+                                        <p class="font-jakarta font-semibold leading-[20.16px]">13:00 PM - 13:30 PM</p>
+                                    </div>
+                                    <input type="radio" value="13:00 PM - 13:30 PM" name="appointment time" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
+                                </label>
+                                <label class="group flex items-center justify-between rounded-full border border-[#F1F1F1] p-4 text-[#757C98] has-[:checked]:bg-[#2C40FF08] has-[:checked]:border-[#2C40FF] has-[:checked]:text-[#2C40FF]">
+                                    <div class="flex items-center gap-[10px]">
+                                        <img src="assets/image/clock-nonactive.png" alt="clock nonactive" class="group-has-[:checked]:hidden size-6" />
+                                        <img src="assets/image/clock-active.png" alt="clock active" class="hidden group-has-[:checked]:block size-6" />
+                                        <p class="font-jakarta font-semibold leading-[20.16px]">14:00 PM - 15:00PM</p>
+                                    </div>
+                                    <input type="radio" value="14:00 PM - 15:00PM" name="appointment time" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
+                                </label>
+                            </div>
+                        </section>
+                        <section class="w-full rounded-3xl bg-[#FFFFFF] px-4 py-8">
+                            <h2 class="font-jakarta mb-6 text-xl font-bold leading-[25.2px] text-[#161616]">Patient Data</h2>
+                            <label>
+                                <p class="mb-3 font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Name Of Patient</p>
+                                <div class="relative w-full rounded-full border border-[#F1F1F1] h-[56px]">
+                                <input type="text" class="font-jakarta peer font-bold leading-[20.16px] text-[#161616] w-full h-full focus:outline-none rounded-full pl-12 placeholder:font-jakarta placeholder:font-bold placeholder:leading-[20.16px] placeholder:text-[#757C98]" placeholder="Patient Full Name">
+                                <img src="assets/icons/people-nonactive.svg" alt="people nonactive" class="absolute left-4 top-1/2 -translate-y-1/2">
+                                <img src="assets/icons/people-active.svg" alt="people active" class="absolute left-4 top-1/2 -translate-y-1/2 peer-placeholder-shown:hidden z-10">
+                                </div>
+                            </label>
+                        </section>
+                    </div>
+                </form>
+
+                <!-- cta -->
+                <nav class="fixed bottom-0 left-0 right-0 z-30">
+                    <div class="mx-auto max-w-[640px]">
+                        <div class="flex h-[120px] w-full items-center justify-between space-x-2 rounded-t-3xl bg-[#FFFFFF] px-4">
+                            <div>
+                                <p class="mb-[2px] whitespace-nowrap font-jakarta text-[24px] font-bold leading-[30.24px] text-[#FF5050]">Rp 240.000</p>
+                                <p class="font-jakarta font-semibold leading-[20.16px] text-[#757C98]">/hour</p>
+                            </div>
+                            <a href="payment-details.html" class="flex h-[52px] w-[180px] items-center justify-center rounded-[100px] bg-[#2C40FF] font-jakarta font-bold leading-[20.16px] text-[#FFFFFF]">Continue</a>
+                        </div>
+                    </div>
+                </nav>
+            </section>
+        </main>
+        <script type="module" src="js/search-result.js"></script>
+    </body>
+</html>
