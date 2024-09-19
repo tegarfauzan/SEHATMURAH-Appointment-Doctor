@@ -22,15 +22,17 @@ function validateForm() {
     // Toggle button color based on form validity
     if (isValid) {
         if (countInput.value === "0" || countInput.value === "Years Old") {
-            continueBtn.style.backgroundColor = "#757C98"; // Gray color
-            continueBtn.style.pointerEvents = "none"; // Disable button
+            continueBtn.style.backgroundColor = "#F1F1F1"; // Gray color
+            continueBtn.style.pointerEvents = "none";
+            // Disable button
         } else {
             continueBtn.style.backgroundColor = "#2C40FF"; // Blue color
-            continueBtn.style.pointerEvents = "auto"; // Enable button
+            continueBtn.style.pointerEvents = "auto";
         }
     } else {
-        continueBtn.style.backgroundColor = "#757C98"; // Gray color
-        continueBtn.style.pointerEvents = "none"; // Disable button
+        continueBtn.classList.remove("#2C40FF");
+        continueBtn.style.backgroundColor = "#F1F1F1"; // Gray color
+        continueBtn.style.pointerEvents = "none";
     }
 }
 
@@ -60,6 +62,7 @@ const colorActiveCount = () => {
     // Ubah warna teks berdasarkan nilai input
     if (countInput.value === "0" || countInput.value === "Years Old") {
         countInput.style.color = "#757C98"; // Atur warna teks jika input adalah "0" atau "Years Old"
+        validateForm();
     } else {
         countInput.style.color = "#161616"; // Reset warna teks jika input tidak memenuhi kondisi
         validateForm();
@@ -117,15 +120,14 @@ document.addEventListener("DOMContentLoaded", function () {
         // Toggle button color based on form validity
         if (isValid) {
             if (countInput.value === "0" || countInput.value === "Years Old") {
-                
-                continueBtn.style.backgroundColor = "#757C98"; // Gray color
+                continueBtn.style.backgroundColor = "#F1F1F1"; // Gray color
                 continueBtn.style.pointerEvents = "none"; // Disable button
             } else {
                 continueBtn.style.backgroundColor = "#2C40FF"; // Blue color
                 continueBtn.style.pointerEvents = "auto"; // Enable button
             }
         } else {
-            continueBtn.style.backgroundColor = "#757C98"; // Gray color
+            continueBtn.style.backgroundColor = "#F1F1F1"; // Gray color
             continueBtn.style.pointerEvents = "none"; // Disable button
         }
     }
