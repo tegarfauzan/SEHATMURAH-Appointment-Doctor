@@ -1,3 +1,45 @@
+const inputs = document.querySelectorAll('input[required], input[name="appointment time"], input[name="gender"]');
+const continueBtn = document.getElementById("continue");
+
+function validateForm() {
+    let isValid = true;
+
+    // Loop through all required inputs
+    inputs.forEach((input) => {
+        if (input.type === "radio") {
+            // For radio buttons, check if at least one is selected
+            const radios = document.querySelectorAll(`input[name="${input.name}"]`);
+            const isChecked = Array.from(radios).some((radio) => radio.checked);
+            if (!isChecked) {
+                isValid = false;
+            }
+        } else if (input.value.trim() === "") {
+            // Check if input value is empty
+            isValid = false;
+        }
+    });
+
+    // Toggle button color based on form validity
+    if (isValid) {
+        if (countInput.value === "0" || countInput.value === "Years Old") {
+            continueBtn.style.backgroundColor = "#757C98"; // Gray color
+            continueBtn.style.pointerEvents = "none"; // Disable button
+        } else {
+            continueBtn.style.backgroundColor = "#2C40FF"; // Blue color
+            continueBtn.style.pointerEvents = "auto"; // Enable button
+        }
+    } else {
+        continueBtn.style.backgroundColor = "#757C98"; // Gray color
+        continueBtn.style.pointerEvents = "none"; // Disable button
+    }
+}
+
+// Add event listener to each input to trigger validation on change
+inputs.forEach((input) => {
+    input.addEventListener("input", validateForm);
+    input.addEventListener("change", validateForm); // For radio buttons
+});
+
 const countInput = document.getElementById("count");
 const decrementButton = document.querySelector(".decrement");
 const incrementButton = document.querySelector(".increment");
@@ -20,6 +62,7 @@ const colorActiveCount = () => {
         countInput.style.color = "#757C98"; // Atur warna teks jika input adalah "0" atau "Years Old"
     } else {
         countInput.style.color = "#161616"; // Reset warna teks jika input tidak memenuhi kondisi
+        validateForm();
     }
 };
 
@@ -33,6 +76,7 @@ decrementButton.addEventListener("click", (event) => {
     }
 
     colorActiveCount();
+    validateForm();
 });
 
 // Event listener untuk tombol increment
@@ -46,3 +90,52 @@ incrementButton.addEventListener("click", (event) => {
 
 // Event listener untuk input manual
 countInput.addEventListener("input", validateInput);
+
+// LOGIKA TOMBOL CONTINUE
+document.addEventListener("DOMContentLoaded", function () {
+    const inputs = document.querySelectorAll('input[required], input[name="appointment time"], input[name="gender"]');
+    const continueBtn = document.getElementById("continue");
+
+    function validateForm() {
+        let isValid = true;
+
+        // Loop through all required inputs
+        inputs.forEach((input) => {
+            if (input.type === "radio") {
+                // For radio buttons, check if at least one is selected
+                const radios = document.querySelectorAll(`input[name="${input.name}"]`);
+                const isChecked = Array.from(radios).some((radio) => radio.checked);
+                if (!isChecked) {
+                    isValid = false;
+                }
+            } else if (input.value.trim() === "") {
+                // Check if input value is empty
+                isValid = false;
+            }
+        });
+
+        // Toggle button color based on form validity
+        if (isValid) {
+            if (countInput.value === "0" || countInput.value === "Years Old") {
+                
+                continueBtn.style.backgroundColor = "#757C98"; // Gray color
+                continueBtn.style.pointerEvents = "none"; // Disable button
+            } else {
+                continueBtn.style.backgroundColor = "#2C40FF"; // Blue color
+                continueBtn.style.pointerEvents = "auto"; // Enable button
+            }
+        } else {
+            continueBtn.style.backgroundColor = "#757C98"; // Gray color
+            continueBtn.style.pointerEvents = "none"; // Disable button
+        }
+    }
+
+    // Add event listener to each input to trigger validation on change
+    inputs.forEach((input) => {
+        input.addEventListener("input", validateForm);
+        input.addEventListener("change", validateForm); // For radio buttons
+    });
+
+    // Initial validation check when page loads
+    validateForm();
+});
