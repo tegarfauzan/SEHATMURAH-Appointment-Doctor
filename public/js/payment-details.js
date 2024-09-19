@@ -56,5 +56,6 @@ const uploadText = document.getElementById("upload");
 fileInput.addEventListener("change", function () {
     if (fileInput.files.length > 0) {
         uploadText.classList.add("hidden"); 
+        fileInput.classList.remove("invisible"); 
     }
 });
