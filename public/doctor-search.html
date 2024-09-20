@@ -12,7 +12,7 @@
     </head>
     <body class="bg-[#F7F8FA]">
         <main class="mx-auto flex h-screen max-w-[640px] items-center justify-center px-4">
-            <form class="w-full">
+            <form action="doctor-details.html" method="POST" class="w-full">
                 <div id="form" class="w-full rounded-3xl bg-[#FFFFFF] px-4 py-8">
                     <div class="mb-8 grid justify-items-center">
                         <img src="assets/icons/doctorsearch-lets-make-appointment.svg" alt="let's make appointment" class="mb-4" />
@@ -40,9 +40,9 @@
                         <img id="arrow" src="assets/icons/doctorsearch-arrow-right.svg" alt="arrow right" class="absolute right-4 top-1/2 -translate-y-1/2" />
                         <span id="change" class="absolute right-4 top-1/2 hidden -translate-y-1/2 font-jakarta font-semibold leading-[20.16px] text-[#2C40FF]">Change</span>
                     </button>
-                    <a href="search-result.html" class="flex h-14 w-full items-center justify-center gap-[10px] rounded-[100px] bg-[#2C40FF]">
-                        <img src="assets/icons/doctorsearch-search-doctor.svg" alt="" /><span class="font-jakarta font-bold leading-[20.16px] text-[#FFFFFF]">Search Doctor</span>
-                    </a>
+                    <button type="submit" class="flex h-14 w-full items-center justify-center gap-[10px] rounded-[100px] bg-[#2C40FF]">
+                        <img src="assets/icons/doctorsearch-search-doctor.svg" alt="search doctor" /><span class="font-jakarta font-bold leading-[20.16px] text-[#FFFFFF]">Search Doctor</span>
+                    </button>
                 </div>
                 <!-- modal -->
                 <div id="myModal" class="absolute left-0 right-0 top-12 z-50 hidden pb-[208px]">
