@@ -1,154 +1,107 @@
-// BCA
-const bcaCopy = document.getElementById("bcaCopy");
-const bcaTitle = document.getElementById("bcaTitle");
-const bcaNumber = document.getElementById("bcaNumber");
-bcaCopy.addEventListener("click", function (event) {
-    event.preventDefault();
-    const nameBank = bcaTitle.innerText;
-    const numberCopy = bcaNumber.innerText;
-    // alert(nameBank + " : " + numberCopy);
-    navigator.clipboard.writeText(numberCopy);
-});
-// BNI
-const bniCopy = document.getElementById("bniCopy");
-const bniTitle = document.getElementById("bniTitle");
-const bniNumber = document.getElementById("bniNumber");
-bniCopy.addEventListener("click", function (event) {
-    event.preventDefault();
-    const nameBank = bniTitle.innerText;
-    const numberCopy = bniNumber.innerText;
-    // alert(nameBank + " : " + numberCopy);
-    navigator.clipboard.writeText(numberCopy);
-});
-// BRI
-const briCopy = document.getElementById("briCopy");
-const briTitle = document.getElementById("briTitle");
-const briNumber = document.getElementById("briNumber");
-briCopy.addEventListener("click", function (event) {
-    event.preventDefault();
-    const nameBank = briTitle.innerText;
-    const numberCopy = briNumber.innerText;
-    // alert(nameBank + " : " + numberCopy);
-    navigator.clipboard.writeText(numberCopy);
-});
+// Copy Bank Account Numbers
+const copyBankNumber = (copyButtonId, titleId, numberId) => {
+    const copyButton = document.getElementById(copyButtonId);
+    const title = document.getElementById(titleId);
+    const number = document.getElementById(numberId);
 
-// SELECT OPTION
-const select = document.getElementsByTagName("select");
-for (let i = 0; i < select.length; i++) {
-    select[i].addEventListener("change", function () {
-        if (this.value) {
-            localStorage.setItem("option", this.value);
-            this.classList.remove("text-[#757C98]");
-            this.classList.add("text-[#161616]");
-        } else {
-            this.classList.remove("text-[#161616]");
-            this.classList.add("text-[#757C98]");
-        }
+    copyButton.addEventListener("click", (event) => {
+        event.preventDefault();
+        navigator.clipboard.writeText(number.innerText);
+        // Optional: Show an alert
+        // alert(`${title.innerText}: ${number.innerText}`);
+    });
+};
+
+copyBankNumber("bcaCopy", "bcaTitle", "bcaNumber");
+copyBankNumber("bniCopy", "bniTitle", "bniNumber");
+copyBankNumber("briCopy", "briTitle", "briNumber");
+
+// Select Option
+const selects = document.getElementsByTagName("select");
+for (let select of selects) {
+    select.addEventListener("change", function () {
+        const isSelected = this.value;
+        localStorage.setItem("banking", isSelected);
+        this.classList.toggle("text-[#757C98]", !isSelected);
+        this.classList.toggle("text-[#161616]", isSelected);
     });
 }
 
-// BANK ACCOUNT NUMBER
+// Bank Account Number Input
 const bankAccountNumberInput = document.getElementById("bankAccountNumber");
 bankAccountNumberInput.addEventListener("input", function () {
-    // Menghapus semua karakter selain angka
-    const validValue = this.value.replace(/[^0-9]/g, "");
-    // Jika ada karakter selain angka, kembalikan input ke nilai valid (angka)
-    if (this.value !== validValue) {
-        this.value = validValue;
-    }
+    this.value = this.value.replace(/[^0-9]/g, "");
 });
 
-// UPLOAD IMAGE
+// Upload Image
 const fileInput = document.getElementById("file-upload");
 const uploadText = document.getElementById("upload");
+
 fileInput.addEventListener("change", function () {
     if (fileInput.files.length > 0) {
         uploadText.classList.add("hidden");
         fileInput.classList.remove("invisible");
+    } else {
+        resetUpload();
     }
 });
 
-// PHONE
-document.getElementById("phoneNumber").addEventListener("focus", function (e) {
-    const input = e.target;
-    const defaultCode = "+62";
-    // Saat input fokus, jika kosong atau tidak dimulai dengan +62, tambahkan +62
-    if (input.value === "" || !input.value.startsWith(defaultCode)) {
-        input.value = defaultCode;
+function resetUpload() {
+    uploadText.classList.remove("hidden");
+    fileInput.classList.add("invisible");
+    fileInput.value = "";
+}
+
+fileInput.addEventListener("input", function () {
+    if (fileInput.files.length === 0) {
+        resetUpload();
     }
 });
-// Cegah penghapusan +62 dengan Backspace atau Delete
-const backspaceDelete = document.getElementById("phoneNumber").addEventListener("keydown", function (e) {
-    const input = e.target;
-    const defaultCode = "+62";
-    // Cegah backspace atau delete jika kursor berada di dalam awalan +62
-    const cursorPosition = input.selectionStart;
+
+// Phone Number Input
+const phoneNumberInput = document.getElementById("phoneNumber");
+const defaultCode = "+62";
+
+phoneNumberInput.addEventListener("focus", function () {
+    if (!this.value.startsWith(defaultCode)) {
+        this.value = defaultCode;
+    }
+});
+
+phoneNumberInput.addEventListener("keydown", function (e) {
+    const cursorPosition = this.selectionStart;
     if (cursorPosition <= defaultCode.length && (e.key === "Backspace" || e.key === "Delete")) {
-        e.preventDefault(); // Mencegah penghapusan
-    }
-});
-// Mencegah pengetikan selain angka setelah +62
-document.getElementById("phoneNumber").addEventListener("input", function (e) {
-    const input = e.target;
-    const defaultCode = "+62";
-    // Ambil bagian yang diinput setelah kode +62
-    const inputAfterCode = input.value.slice(defaultCode.length);
-    // Jika ada karakter non-numerik, kembalikan ke angka yang valid
-    if (/\D/.test(inputAfterCode)) {
-        input.value = defaultCode + inputAfterCode.replace(/\D/g, ""); // Hanya angka yang diperbolehkan
+        e.preventDefault();
     }
 });
 
-// TOMBOL SUBMIT ACTIVE NONACTIVE// Ambil elemen-elemen yang diperlukan
+phoneNumberInput.addEventListener("input", function () {
+    const inputAfterCode = this.value.slice(defaultCode.length);
+    this.value = defaultCode + inputAfterCode.replace(/\D/g, "");
+});
+
+// Submit Button Activation
 const form = document.querySelector("form");
 const submitButton = document.getElementById("payNow");
 const inputs = document.querySelectorAll("input[required], select[required]");
 const bankingRadios = document.querySelectorAll('input[type="radio"][name="banking"]');
-// Fungsi untuk memeriksa apakah semua input sudah diisi
+
 function validateForm() {
-    console.log(bankingRadios);
-    let isValid = true;
-    inputs.forEach((input) => {
-        if (!input.value) {
-            isValid = false;
-        }
-    });
+    let isValid = Array.from(inputs).every((input) => input.value);
+    let isBankingChecked = Array.from(bankingRadios).some((radio) => radio.checked);
 
-    // Periksa apakah salah satu radio button dengan nama "banking" sudah tercentang
-    let isBankingChecked = false;
-    bankingRadios.forEach((radio) => {
-        if (radio.checked) {
-            isBankingChecked = true;
-        }
-    });
-
-    // Jika tidak ada radio yang tercentang, anggap form tidak valid
-    if (!isBankingChecked) {
-        isValid = false;
-    }
-
-    if (isValid) {
-        submitButton.disabled = false;
-        submitButton.style.backgroundColor = "#2C40FF";
-    } else {
-        submitButton.disabled = true;
-        submitButton.style.backgroundColor = "#F1F1F1";
-    }
+    submitButton.disabled = !(isValid && isBankingChecked);
+    submitButton.style.backgroundColor = submitButton.disabled ? "#F1F1F1" : "#2C40FF";
 }
-// Periksa form saat ada perubahan pada input
-inputs.forEach((input) => {
-    input.addEventListener("input", validateForm);
-});
 
-bankingRadios.forEach((radio) => {
-    radio.addEventListener("change", validateForm); // Tambahkan event listener untuk radio button
-});
+inputs.forEach((input) => input.addEventListener("input", validateForm));
+bankingRadios.forEach((radio) => radio.addEventListener("change", validateForm));
 
-// Cegah form disubmit jika ada input yang belum terisi
 form.addEventListener("submit", (e) => {
     if (submitButton.disabled) {
         e.preventDefault();
     }
 });
-// Jalankan validasi awal
+
+// Initial validation
 validateForm();

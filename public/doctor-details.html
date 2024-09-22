@@ -14,20 +14,19 @@
         <main class="relative mx-auto max-w-[640px] pb-[120px]">
             <header class="h-[219px] w-full rounded-b-2xl bg-[#2C40FF] px-4 pt-12">
                 <a href="search-result.html">
-                    <img src="assets/icons/arrow-left-blue.svg" alt="arrow left" />
+                    <img src="assets/icons/arrow-left-blue.svg" alt="Icon" />
                 </a>
                 <div class="absolute left-1/2 top-12 -translate-x-1/2">
-                    <h1 class="mb-[3px] whitespace-nowrap font-jakarta text-xl font-bold text-center leading-[25.2px] text-[#FFFFFF]">Doctor Details</h1>
+                    <h1 class="mb-[3px] whitespace-nowrap text-center font-jakarta text-xl font-bold leading-[25.2px] text-[#FFFFFF]">Doctor Details</h1>
                     <p class="whitespace-nowrap text-center font-jakarta font-semibold leading-[20.16px] text-[#AEB5FF]">We provide top doctors.</p>
                 </div>
             </header>
-            <section class="-mt-[91px] w-full space-y-4 pb-4">
-                <!-- cart detail -->
-                <div class="mx-4 space-y-5 rounded-3xl bg-[#FFFFFF] p-5">
-                    <div class="flex items-center gap-x-[12px]">
+            <section id="ContainerDetails" class="-mt-[91px] w-full space-y-4 pb-4">
+                <section id="Card" class="mx-4 space-y-5 rounded-3xl bg-[#FFFFFF] p-5">
+                    <div id="CardHeader" class="flex items-center gap-x-[12px]">
                         <div class="relative h-[120px] w-[100px]">
-                            <img class="rounded-ee-md rounded-es-3xl rounded-se-3xl rounded-ss-md bg-[#F2F2F2] object-cover" src="assets/image/searchresult-dr-raze-invoker.png" alt="Dr. Raze Invoker" />
-                            <img class="absolute left-2 top-2" src="assets/icons/alert-online.svg" alt="alert online" />
+                            <img class="rounded-ee-md rounded-es-3xl rounded-se-3xl rounded-ss-md bg-[#F2F2F2] object-cover" src="assets/image/searchresult-dr-raze-invoker.png" alt="Image" />
+                            <img class="absolute left-2 top-2" src="assets/icons/alert-online.svg" alt="Icon" />
                         </div>
                         <div class="space-y-2">
                             <h3 class="font-jakarta font-bold leading-[20.16px] text-[#2C40FF]">Radiant Hospital</h3>
@@ -35,34 +34,33 @@
                             <p class="font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Internist Specialist</p>
                         </div>
                     </div>
-                    <div class="flex items-center justify-evenly rounded-2xl border border-[#F1F1F1] py-4">
+                    <div id="CardInfo" class="flex items-center justify-evenly rounded-2xl border border-[#F1F1F1] py-4">
                         <div class="grid w-[80.33px] place-items-center">
                             <div class="mb-1 flex gap-[2px]">
-                                <img src="assets/icons/searchresult-verify.svg" alt="verify" />
+                                <img src="assets/icons/searchresult-verify.svg" alt="Icon" />
                                 <h4 class="font-jakarta font-bold leading-[20.16px] text-[#161616]">Verify</h4>
                             </div>
                             <p class="font-jakarta text-sm font-semibold leading-[17.64px] text-[#757C98]">Certified</p>
                         </div>
-                        <img src="assets/icons/line-vertical.svg" alt="line vertical" />
+                        <hr class="w-[36px] rotate-90 border-[#F1F1F1]" />
                         <div class="grid w-[80.33px] place-items-center">
                             <div class="mb-1 flex gap-[2px]">
-                                <img src="assets/icons/searchresult-5-years.svg" alt="5 years" />
+                                <img src="assets/icons/searchresult-5-years.svg" alt="Icon" />
                                 <h4 class="font-jakarta font-bold leading-[20.16px] text-[#161616]">5 Years</h4>
                             </div>
                             <p class="font-jakarta text-sm font-semibold leading-[17.64px] text-[#757C98]">Experience</p>
                         </div>
-                        <img src="assets/icons/line-vertical.svg" alt="line vertical" />
+                        <hr class="w-[36px] rotate-90 border-[#F1F1F1]" />
                         <div class="grid w-[80.33px] place-items-center">
                             <div class="mb-1 flex gap-[2px]">
-                                <img src="assets/icons/searchresult-4.5.svg" alt="verify" />
+                                <img src="assets/icons/searchresult-4.5.svg" alt="Icon" />
                                 <h4 class="font-jakarta font-bold leading-[20.16px] text-[#161616]">4.5</h4>
                             </div>
                             <p class="font-jakarta text-sm font-semibold leading-[17.64px] text-[#757C98]">Rating</p>
                         </div>
                     </div>
-                </div>
-                <!-- about -->
-                <div class="w-full rounded-3xl bg-[#FFFFFF] px-4 py-8">
+                </section>
+                <section id="About" class="w-full rounded-3xl bg-[#FFFFFF] px-4 py-8">
                     <h2 class="mb-4 font-jakarta text-xl font-bold leading-[25.2px] text-[#161616]">About Doctor</h2>
                     <div class="w-full space-y-4 rounded-3xl border border-[#F1F1F1] p-6">
                         <div class="flex items-center justify-between">
@@ -70,35 +68,39 @@
                                 <h3 class="mb-[2px] font-jakarta text-lg font-bold leading-[22.68px] text-[#161616]">31 Aug 2024</h3>
                                 <p class="font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Doctor Available</p>
                             </div>
-                            <img src="assets/icons/doctordetails-doctor-available.svg" alt="doctor available" />
+                            <img src="assets/icons/doctordetails-doctor-available.svg" alt="Icon" />
                         </div>
-                        <img src="assets/icons/line-horizontal.svg" alt="line horizontal" class="mx-auto w-full" />
+                        <hr class="w-full border-[#F1F1F1]" />
                         <div class="flex items-center justify-between">
                             <div>
                                 <h3 class="mb-[2px] font-jakarta text-lg font-bold leading-[22.68px] text-[#161616]">S2 Ascent University</h3>
                                 <p class="font-jakarta font-semibold leading-[20.16px] text-[#757C98]">College graduate</p>
                             </div>
-                            <img src="assets/image/doctordetails-college-graduate.png" alt="college graduate" class="size-6"/>
+                            <img src="assets/image/doctordetails-college-graduate.png" alt="Image" class="size-6" />
                         </div>
-                        <img src="assets/icons/line-horizontal.svg" alt="line horizontal" class="mx-auto w-full" />
+                        <hr class="w-full border-[#F1F1F1]" />
                         <div class="flex items-center justify-between">
                             <div>
                                 <h3 class="mb-[2px] font-jakarta text-lg font-bold leading-[22.68px] text-[#161616]">Nobel Prize in Medicine</h3>
                                 <p class="font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Official Achievement</p>
                             </div>
-                            <img src="assets/image/doctordetails-official-achievement.png" alt="official achievement" class="size-6"/>
+                            <img src="assets/image/doctordetails-official-achievement.png" alt="Image" class="size-6" />
                         </div>
                     </div>
-                </div>
-                <!-- location -->
-                <div class="w-full rounded-3xl bg-[#FFFFFF] px-4 py-8">
+                </section>
+                <section id="Location" class="w-full rounded-3xl bg-[#FFFFFF] px-4 py-8">
                     <h2 class="mb-4 font-jakarta text-xl font-bold leading-[25.2px] text-[#161616]">Check-Up Location</h2>
-                    <div class="relative">
-                        <div class="rounded-3xl" style="overflow:hidden;max-width:100%;width:100%;height:280px;"><div id="my-map-canvas" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=jakarta&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="our-googlemap-code" rel="nofollow" href="https://www.bootstrapskins.com/themes" id="authmaps-data">premium bootstrap themes</a><style>#my-map-canvas img{max-height:none;max-width:none!important;background:none!important;}</style></div>
-                        <div class="absolute bottom-4 w-full px-4">
+                    <div id="ContainerMap" class="relative">
+                        <div id="Map" class="h-[280px] w-full max-w-full overflow-hidden rounded-3xl">
+                            <div id="my-map-canvas" class="h-full w-full max-w-full">
+                                <iframe class="h-full w-full border-none" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=jakarta&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+                            </div>
+                            <a class="our-googlemap-code" rel="nofollow" href="https://www.bootstrapskins.com/themes" id="authmaps-data">premium bootstrap themes</a>
+                        </div>
+                        <div id="CtaMap" class="absolute bottom-4 w-full px-4">
                             <div class="flex items-center justify-between rounded-2xl bg-[#FFFFFF] p-3">
                                 <div class="flex items-center gap-[10px]">
-                                    <img src="assets/icons/doctordetails-location-map.svg" alt="location map" />
+                                    <img src="assets/icons/doctordetails-location-map.svg" alt="Icon" />
                                     <div>
                                         <h3 class="mb-1 font-jakarta text-[18px] font-bold leading-[22.68px] text-[#161616]">Radiant Hospital</h3>
                                         <p class="font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Jakarta, Indonesia</p>
@@ -108,70 +110,68 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- review -->
-                <div class="w-full rounded-3xl bg-[#FFFFFF] px-4 py-8">
+                </section>
+                <section id="Reviews" class="w-full rounded-3xl bg-[#FFFFFF] px-4 py-8">
                     <div class="mb-4 flex justify-between">
                         <h2 class="font-jakarta text-xl font-bold leading-[25.2px] text-[#161616]">Reviews and Ratings</h2>
                         <a href="#" class="font-jakarta text-sm font-bold leading-[17.64px] text-[#757C98]">View All</a>
                     </div>
                     <div class="space-y-6 rounded-3xl border border-[#F1F1F1] p-6">
-                        <div class="flex items-center justify-between">
+                        <div id="rating" class="flex items-center justify-between">
                             <strong class="font-jakarta text-[40px] font-extrabold leading-[50.4px] tracking-[-8%] text-[#000000]">4.5/5.0</strong>
                             <div>
-                                <img src="assets/icons/doctordetails-stars.svg" alt="stars" class="mb-2" />
+                                <img src="assets/icons/doctordetails-stars.svg" alt="Icon" class="mb-2" />
                                 <p class="font-jakarta font-semibold leading-[20.16px] text-[#757C98]">1250+ Reviews</p>
                             </div>
                         </div>
-                        <img src="assets/icons/line-horizontal.svg" alt="line" class="mx-auto w-full" />
-                        <article>
+                        <hr class="w-full border-[#F1F1F1]" />
+                        <article id="Review1">
                             <div class="mb-[21px] flex items-center justify-between">
                                 <div class="flex items-center">
-                                    <img src="assets/image/doctordetails-nabila-geeqo.png" alt="Nabila Geeqo" class="mr-3 size-[62px] rounded-full" />
+                                    <img src="assets/image/doctordetails-nabila-geeqo.png" alt="Icon" class="mr-3 size-[62px] rounded-full" />
                                     <div>
                                         <h3 class="mb-1 font-jakarta font-bold leading-[22.68px] text-[#161616]">Nabila Geeqo</h3>
                                         <p class="font-jakarta font-semibold leading-[20.16px] text-[#757C98]">30 min ago</p>
                                     </div>
                                 </div>
                                 <div class="flex h-8 w-[61px] items-center rounded-md bg-[#FFB06317] p-[6px]">
-                                    <img src="assets/icons/doctordetails-star-yellow.svg" alt="star" class="mr-[2px]" />
+                                    <img src="assets/icons/doctordetails-star-yellow.svg" alt="Icon" class="mr-[2px]" />
                                     <p class="font-jakarta font-bold leading-[20.16px] text-[#FFB063]">4.5</p>
                                 </div>
                             </div>
                             <p class="font-jakarta font-semibold leading-[25.6px] text-[#757C98]">"Excellent service! Dr. Raze Invoker was attentive and thorough. The clinic was clean, and the staff were friendly. Highly recommend for in-person care!"</p>
                         </article>
-                        <img src="assets/icons/line-horizontal.svg" alt="line" class="mx-auto w-full" />
-                        <article>
+                        <hr class="w-full border-[#F1F1F1]" />
+                        <article id="Review2">
                             <div class="mb-[21px] flex items-center justify-between">
                                 <div class="flex items-center">
-                                    <img src="assets/image/doctordetails-dire-clove.png" alt="Dire Clove" class="mr-3 size-[62px] rounded-full" />
+                                    <img src="assets/image/doctordetails-dire-clove.png" alt="Image" class="mr-3 size-[62px] rounded-full" />
                                     <div>
                                         <h3 class="mb-1 font-jakarta font-bold leading-[22.68px] text-[#161616]">Dire Clove</h3>
                                         <p class="font-jakarta font-semibold leading-[20.16px] text-[#757C98]">A week ago</p>
                                     </div>
                                 </div>
                                 <div class="flex h-8 w-[61px] items-center rounded-md bg-[#FFB06317] p-[6px]">
-                                    <img src="assets/icons/doctordetails-star-yellow.svg" alt="star" class="mr-[2px]" />
+                                    <img src="assets/icons/doctordetails-star-yellow.svg" alt="Icon" class="mr-[2px]" />
                                     <p class="font-jakarta font-bold leading-[20.16px] text-[#FFB063]">5.0</p>
                                 </div>
                             </div>
                             <p class="font-jakarta font-semibold leading-[25.6px] text-[#757C98]">"Quick and easy appointment! Dr. Raze Invoker was professional, and the staff made me feel comfortable. Highly recommend!"</p>
                         </article>
                     </div>
-                </div>
-                <!-- cta -->
-                <nav class="fixed bottom-0 left-0 right-0 z-30">
-                    <div class="mx-auto max-w-[640px]">
-                        <div class="h-[120px] space-x-2 flex justify-between items-center w-full rounded-t-3xl bg-[#FFFFFF] px-4">
-                            <div>
-                                <p class="mb-[2px] whitespace-nowrap font-jakarta text-[24px] font-bold leading-[30.24px] text-[#FF5050]">Rp 240.000</p>
-                                <p class="font-jakarta font-semibold leading-[20.16px] text-[#757C98]">/hours</p>
-                            </div>
-                            <a href="booking-confirmation.html" class="flex h-[52px] w-[197px] items-center justify-center rounded-[100px] bg-[#2C40FF] font-jakarta font-bold leading-[20.16px] text-[#FFFFFF]">Book Now</a>
-                        </div>
-                    </div>
-                </nav>
+                </section>
             </section>
+            <nav id="Cta" class="fixed bottom-0 left-0 right-0 z-30">
+                <div class="mx-auto max-w-[640px]">
+                    <div class="flex h-[120px] w-full items-center justify-between space-x-2 rounded-t-3xl bg-[#FFFFFF] px-4">
+                        <div>
+                            <p class="mb-[2px] whitespace-nowrap font-jakarta text-[24px] font-bold leading-[30.24px] text-[#FF5050]">Rp 240.000</p>
+                            <p class="font-jakarta font-semibold leading-[20.16px] text-[#757C98]">/hours</p>
+                        </div>
+                        <a href="booking-confirmation.html" class="flex h-[52px] w-[197px] items-center justify-center rounded-[100px] bg-[#2C40FF] font-jakarta font-bold leading-[20.16px] text-[#FFFFFF]">Book Now</a>
+                    </div>
+                </div>
+            </nav>
         </main>
         <script type="module" src="js/search-result.js"></script>
     </body>

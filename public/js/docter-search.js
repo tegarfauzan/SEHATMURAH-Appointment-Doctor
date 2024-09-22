@@ -3,7 +3,7 @@ const openButton = document.getElementById("openModal");
 const closeButton = document.getElementById("closeModal");
 const okButton = document.getElementById("okButton");
 const modal = document.getElementById("myModal");
-const radioInput = document.getElementById("radioInput");
+const radioInput = document.getElementById("ContainerRadioInputs");
 const selectValue = document.getElementById("selectedValue");
 const chooseGrey = document.getElementById("chooseGrey");
 const chooseBlack = document.getElementById("chooseBlack");
@@ -34,7 +34,7 @@ for (let i = 0; i < select.length; i++) {
 // OPEN modal
 openButton.addEventListener("click", (event) => {
     event.preventDefault();
-    const currentValue = selectedValue.getAttribute("data-value");
+    const currentValue = selectValue.getAttribute("data-value");
     form.classList.add("hidden");
     if (currentValue) {
         const radioToCheck = document.querySelector(`input[name="specialist"][value="${currentValue}"]`);
@@ -78,7 +78,7 @@ closeButton.addEventListener("click", (event) => {
     form.classList.remove("hidden");
 
     const radioInputs = document.querySelectorAll('input[name="specialist"]');
-    if (selectedValue.innerHTML == "Choose a specialist") {
+    if (selectValue.innerHTML == "Choose a specialist") {
         radioInputs.forEach((radio) => {
             radio.checked = false;
         });
@@ -90,8 +90,7 @@ closeButton.addEventListener("click", (event) => {
 document.addEventListener("DOMContentLoaded", function () {
     const option = localStorage.getItem("option");
     const dataValue = localStorage.getItem("data-value");
-    const selectElement = document.querySelector("#mySelect");
-    const openModal = document.querySelector("#openModal");
+    const selectElement = document.querySelector("#MySelect");
 
     if (option && selectElement) {
         selectElement.value = option;
@@ -100,9 +99,8 @@ document.addEventListener("DOMContentLoaded", function () {
         selectElement.classList.add("font-bold");
         selectElement.classList.add("text-[#161616]");
     }
-    if (dataValue && openModal) {
-        openModal.setAttribute("data-value", dataValue);
-        selectedValue.innerHTML = dataValue;
+    if (dataValue) {
+        selectValue.innerHTML = dataValue;
         selectValue.classList.add("text-[#161616]");
         chooseGrey.classList.add("hidden");
         modal.classList.add("hidden");

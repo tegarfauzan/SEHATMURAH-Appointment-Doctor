@@ -15,69 +15,67 @@
             <form action="doctor-details.html" class="w-full">
                 <div id="form" class="w-full rounded-3xl bg-[#FFFFFF] px-4 py-8">
                     <div class="mb-8 grid justify-items-center">
-                        <img src="assets/icons/doctorsearch-lets-make-appointment.svg" alt="let's make appointment" class="mb-4" />
+                        <img src="assets/icons/doctorsearch-lets-make-appointment.svg" alt="Icon" class="mb-4" />
                         <h1 class="font-jakarta text-2xl font-extrabold leading-[30.24px] text-[#161616]">Let’s Make Appointment</h1>
                     </div>
-                    <!-- inputke1 -->
-                    <h3 class="font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Which city are you in?</h3>
-                    <div class="relative mb-6 mt-4">
-                        <select id="mySelect" required class="peer h-[56px] w-full appearance-none rounded-[100px] border border-[#F1F1F1] bg-white pl-12 font-jakarta font-semibold leading-[20.16px] text-[#757C98] focus:outline-none">
-                            <option value="" disabled selected>Enter the city name</option>
-                            <option value="Buitenzorg">Buitenzorg</option>
-                            <option value="Surabaya">Surabaya</option>
-                            <option value="Jakarta">Jakarta</option>
-                        </select>
-
-                        <img src="assets/icons/doctorsearch-location-nonactive.svg" alt="location nonactive" class="absolute left-4 top-1/2 hidden -translate-y-1/2 peer-invalid:block" />
-                        <img src="assets/icons/doctorsearch-location-active.svg" alt="location active" class="absolute left-4 top-1/2 hidden -translate-y-1/2 peer-valid:block" />
+                    <div id="InputContainer">
+                        <div class="mb-6">
+                            <h3 class="font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Which city are you in?</h3>
+                            <div class="relative mt-4">
+                                <select id="MySelect" required class="peer h-[56px] w-full appearance-none rounded-[100px] border border-[#F1F1F1] bg-white pl-12 font-jakarta font-semibold leading-[20.16px] text-[#757C98] focus:outline-none">
+                                    <option value="" disabled selected>Enter the city name</option>
+                                    <option value="Buitenzorg">Buitenzorg</option>
+                                    <option value="Surabaya">Surabaya</option>
+                                    <option value="Jakarta">Jakarta</option>
+                                </select>
+                                <img src="assets/icons/doctorsearch-location-nonactive.svg" alt="Icon" class="absolute left-4 top-1/2 hidden -translate-y-1/2 peer-invalid:block" />
+                                <img src="assets/icons/doctorsearch-location-active.svg" alt="Icon" class="absolute left-4 top-1/2 hidden -translate-y-1/2 peer-valid:block" />
+                            </div>
+                        </div>
+                        <div class="mb-8">
+                            <h3 class="font-jakarta font-semibold leading-[20.16px] text-[#757C98]">What Speciality you need?</h3>
+                            <button id="openModal" data-value="" class="relative mt-4 h-[56px] w-full rounded-full border border-[#F1F1F1] pl-12 text-start font-jakarta font-bold leading-[20.16px] text-[#757C98]">
+                                <span id="selectedValue">Choose a specialist</span>
+                                <img src="assets/icons/doctorsearch-input-choose-a-specialist-nonactive.svg" alt="Icon" id="chooseGrey" class="absolute left-4 top-1/2 z-20 -translate-y-1/2" />
+                                <img src="assets/icons/doctorsearch-input-choose-a-specialist-active.svg" alt="Icon" id="chooseBlack" class="absolute left-4 top-1/2 -translate-y-1/2" />
+                                <img id="arrow" src="assets/icons/doctorsearch-arrow-right.svg" alt="Icon" class="absolute right-4 top-1/2 -translate-y-1/2" />
+                                <span id="change" class="absolute right-4 top-1/2 hidden -translate-y-1/2 font-jakarta font-semibold leading-[20.16px] text-[#2C40FF]">Change</span>
+                            </button>
+                        </div>
+                        <button type="submit" class="flex h-14 w-full items-center justify-center gap-[10px] rounded-[100px] bg-[#2C40FF]"><img src="assets/icons/doctorsearch-search-doctor.svg" alt="Icon" /><span class="font-jakarta font-bold leading-[20.16px] text-[#FFFFFF]">Search Doctor</span></button>
                     </div>
-                    <!-- inputke2 -->
-                    <h3 class="font-jakarta font-semibold leading-[20.16px] text-[#757C98]">What Speciality you need?</h3>
-                    <button id="openModal" data-value="" class="relative mb-8 mt-4 h-[56px] w-full rounded-full border border-[#F1F1F1] pl-12 text-start font-jakarta font-bold leading-[20.16px] text-[#757C98]">
-                        <span id="selectedValue">Choose a specialist</span>
-                        <img src="assets/icons/doctorsearch-input-choose-a-specialist-nonactive.svg" alt="choose a specialist nonactive" id="chooseGrey" class="absolute left-4 top-1/2 z-20 -translate-y-1/2" />
-                        <img src="assets/icons/doctorsearch-input-choose-a-specialist-active.svg" alt="choose a specialist active" id="chooseBlack" class="absolute left-4 top-1/2 -translate-y-1/2" />
-                        <img id="arrow" src="assets/icons/doctorsearch-arrow-right.svg" alt="arrow right" class="absolute right-4 top-1/2 -translate-y-1/2" />
-                        <span id="change" class="absolute right-4 top-1/2 hidden -translate-y-1/2 font-jakarta font-semibold leading-[20.16px] text-[#2C40FF]">Change</span>
-                    </button>
-                    <button type="submit" class="flex h-14 w-full items-center justify-center gap-[10px] rounded-[100px] bg-[#2C40FF]">
-                        <img src="assets/icons/doctorsearch-search-doctor.svg" alt="search doctor" /><span class="font-jakarta font-bold leading-[20.16px] text-[#FFFFFF]">Search Doctor</span>
-                    </button>
                 </div>
-                <!-- modal -->
                 <div id="myModal" class="absolute left-0 right-0 top-12 z-50 hidden pb-[208px]">
                     <div class="mx-auto max-w-[640px] px-4">
                         <div class="h-[145px] rounded-t-3xl bg-[linear-gradient(100.99deg,_#277B53_0%,_#277B7B_100%)] px-4 pt-6">
                             <p class="text-center font-jakarta font-bold leading-[25.6px] text-[#FFFFFF]">SEHATMURAH provides experienced and trusted doctors.</p>
                         </div>
-                        <!-- input radio -->
                         <div class="-mt-[45px] rounded-3xl bg-[#FFFFFF] px-4 py-8">
                             <h1 class="mb-[3px] text-center font-jakarta text-xl font-bold leading-[25.2px] text-[#161616]">Select Specialist</h1>
                             <p class="mb-4 text-center font-jakarta font-semibold leading-[20.16px] text-[#757C98]">6 Total Specialist</p>
-                            <div id="radioInput" class="group">
-                                <!-- card1 -->
-                                <label class="mb-4 block">
+                            <div id="ContainerRadioInputs" class="group">
+                                <label class="obstetrics mb-4 block">
                                     <div class="w-full rounded-3xl border border-[#F1F1F1] p-4">
                                         <div class="flex items-center justify-between">
                                             <div class="flex items-center gap-3">
                                                 <div class="flex size-[70px] items-center justify-center">
-                                                    <img src="assets/image/doctorsearch-modal-obstetrics.png" alt="obstetrics" class="h-full w-full rounded-3xl object-cover" />
+                                                    <img src="assets/image/doctorsearch-modal-obstetrics.png" alt="Image" class="h-full w-full rounded-3xl object-cover" />
                                                 </div>
                                                 <div class="gap-[6px]">
                                                     <h2 class="mb-[6px] font-jakarta text-[18px] font-bold leading-[22.68px] text-[#161616]">Obstetrics</h2>
                                                     <p class="font-jakarta text-[16px] font-semibold leading-[20.16px] text-[#757C98]">230 doctors</p>
                                                 </div>
                                             </div>
-                                            <input type="radio" value="Obstetrics" name="specialist" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
-                                        </div></div
-                                ></label>
-                                <!-- card2 -->
-                                <label class="mb-4 block">
+                                            <input value="Obstetrics" type="radio" name="specialist" class=" size-6 rounded-full p-1 accent-[#2C40FF]" />
+                                        </div>
+                                    </div>
+                                </label>
+                                <label class="neurology mb-4 block">
                                     <div class="w-full rounded-3xl border border-[#F1F1F1] p-4">
                                         <div class="flex items-center justify-between">
                                             <div class="flex items-center gap-3">
                                                 <div class="flex size-[70px] items-center justify-center">
-                                                    <img src="assets/image/doctorsearch-modal-neurology.png" alt="neurology" class="h-full w-full rounded-3xl object-cover" />
+                                                    <img src="assets/image/doctorsearch-modal-neurology.png" alt="Image" class="h-full w-full rounded-3xl object-cover" />
                                                 </div>
                                                 <div>
                                                     <h2 class="mb-[6px] font-jakarta text-[18px] font-bold leading-[22.68px] text-[#161616]">Neurology</h2>
@@ -85,15 +83,15 @@
                                                 </div>
                                             </div>
                                             <input type="radio" value="Neurology" name="specialist" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
-                                        </div></div
-                                ></label>
-                                <!-- card3 -->
-                                <label class="mb-4 block">
+                                        </div>
+                                    </div>
+                                </label>
+                                <label class="ophthalmology mb-4 block">
                                     <div class="w-full rounded-3xl border border-[#F1F1F1] p-4">
                                         <div class="flex items-center justify-between">
                                             <div class="flex items-center gap-3">
                                                 <div class="flex size-[70px] items-center justify-center">
-                                                    <img src="assets/image/doctorsearch-modal-ophthalmology.png" alt="ophthalmology" class="h-full w-full rounded-3xl object-cover" />
+                                                    <img src="assets/image/doctorsearch-modal-ophthalmology.png" alt="Image" class="h-full w-full rounded-3xl object-cover" />
                                                 </div>
                                                 <div>
                                                     <h2 class="mb-[6px] font-jakarta text-[18px] font-bold leading-[22.68px] text-[#161616]">Ophthalmology</h2>
@@ -101,15 +99,15 @@
                                                 </div>
                                             </div>
                                             <input type="radio" value="Ophthalmology" name="specialist" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
-                                        </div></div
-                                ></label>
-                                <!-- card4 -->
-                                <label class="mb-4 block">
+                                        </div>
+                                    </div>
+                                </label>
+                                <label class="cardiology mb-4 block">
                                     <div class="w-full rounded-3xl border border-[#F1F1F1] p-4">
                                         <div class="flex items-center justify-between">
                                             <div class="flex items-center gap-3">
                                                 <div class="flex size-[70px] items-center justify-center">
-                                                    <img src="assets/image/doctorsearch-modal-cardiology.png" alt="cardiology" class="h-full w-full rounded-3xl object-cover" />
+                                                    <img src="assets/image/doctorsearch-modal-cardiology.png" alt="Image" class="h-full w-full rounded-3xl object-cover" />
                                                 </div>
                                                 <div>
                                                     <h2 class="mb-[6px] font-jakarta text-[18px] font-bold leading-[22.68px] text-[#161616]">Cardiology</h2>
@@ -117,15 +115,15 @@
                                                 </div>
                                             </div>
                                             <input type="radio" value="Cardiology" name="specialist" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
-                                        </div></div
-                                ></label>
-                                <!-- card5 -->
-                                <label class="mb-4 block">
+                                        </div>
+                                    </div>
+                                </label>
+                                <label class="pediatric mb-4 block">
                                     <div class="w-full rounded-3xl border border-[#F1F1F1] p-4">
                                         <div class="flex items-center justify-between">
                                             <div class="flex items-center gap-3">
                                                 <div class="flex size-[70px] items-center justify-center">
-                                                    <img src="assets/image/doctorsearch-modal-pediatric.png" alt="pediatric" class="h-full w-full rounded-3xl object-cover" />
+                                                    <img src="assets/image/doctorsearch-modal-pediatric.png" alt="Image" class="h-full w-full rounded-3xl object-cover" />
                                                 </div>
                                                 <div>
                                                     <h2 class="mb-[6px] font-jakarta text-[18px] font-bold leading-[22.68px] text-[#161616]">Pediatric</h2>
@@ -133,15 +131,15 @@
                                                 </div>
                                             </div>
                                             <input type="radio" value="Pediatric" name="specialist" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
-                                        </div></div
-                                ></label>
-                                <!-- card6 -->
-                                <label>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label class="dermatology">
                                     <div class="w-full rounded-3xl border border-[#F1F1F1] p-4">
                                         <div class="flex items-center justify-between">
                                             <div class="flex items-center gap-3">
                                                 <div class="flex size-[70px] items-center justify-center">
-                                                    <img src="assets/image/doctorsearch-modal-dermatology.png" alt="dermatology" class="h-full w-full rounded-3xl object-cover" />
+                                                    <img src="assets/image/doctorsearch-modal-dermatology.png" alt="Image" class="h-full w-full rounded-3xl object-cover" />
                                                 </div>
                                                 <div>
                                                     <h2 class="mb-[6px] font-jakarta text-[18px] font-bold leading-[22.68px] text-[#161616]">Dermatology</h2>
@@ -149,16 +147,13 @@
                                                 </div>
                                             </div>
                                             <input type="radio" value="Dermatology" name="specialist" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
-                                        </div></div
-                                ></label>
-
-                                <!-- button cta-->
-                                <nav class="fixed bottom-0 left-0 right-0 z-30 mx-auto">
+                                        </div>
+                                    </div>
+                                </label>
+                                <nav class="modal-cta fixed bottom-0 left-0 right-0 z-30 mx-auto">
                                     <div class="mx-auto max-w-[640px]">
                                         <div class="flex h-[192px] w-full flex-col gap-y-4 rounded-t-3xl bg-[#FFFFFF] px-4 py-8">
-                                            <button type="button" id="okButton" disabled class="flex h-[56px] w-full items-center justify-center rounded-full bg-[#F1F1F1] text-center font-jakarta font-bold leading-[20.16px] text-[#FFFFFF] group-has-[:checked]:bg-[#2C40FF]">
-                                                Continue
-                                            </button>
+                                            <button type="button" id="okButton" disabled class="flex h-[56px] w-full items-center justify-center rounded-full bg-[#F1F1F1] text-center font-jakarta font-bold leading-[20.16px] text-[#FFFFFF] group-has-[:checked]:bg-[#2C40FF]">Continue</button>
                                             <button type="button" id="closeModal" class="flex h-[56px] w-full items-center justify-center rounded-full bg-[#2C40FF17] text-center font-jakarta font-bold leading-[20.16px] text-[#2C40FF]">Kembali</button>
                                         </div>
                                     </div>
@@ -169,26 +164,24 @@
                 </div>
             </form>
         </main>
-
-        <nav class="fixed bottom-0 left-0 right-0 z-30 mx-auto">
+        <nav class="navigate fixed bottom-0 left-0 right-0 z-30 mx-auto">
             <div class="mx-auto max-w-[640px]">
                 <div class="flex items-center justify-between rounded-t-2xl border-t border-[#F7F8FA] bg-[#FFFFFF] px-4 py-6">
                     <a href="index.html" class="grid w-[112.33px] place-items-center gap-[6px]">
-                        <img src="assets/icons/homepage-nav-home-nonactive.svg" alt="home nonactive" />
+                        <img src="assets/icons/homepage-nav-home-nonactive.svg" alt="Icon" />
                         <p class="font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Home</p>
                     </a>
                     <a href="doctor-search.html" class="grid w-[112.33px] place-items-center gap-[6px]">
-                        <img src="assets/icons/homepage-nav-appointment-active.svg" alt="appointment active" />
+                        <img src="assets/icons/homepage-nav-appointment-active.svg" alt="Icon" />
                         <p class="font-jakarta font-bold leading-[20.16px] text-[#2C40FF]">Appointment</p>
                     </a>
                     <a href="#" class="grid w-[112.33px] place-items-center gap-[6px]">
-                        <img src="assets/icons/homepage-nav-booking-nonactive.svg" alt="booking nonactive" />
+                        <img src="assets/icons/homepage-nav-booking-nonactive.svg" alt="Icon" />
                         <p class="font-jakarta font-semibold leading-[20.16px] text-[#757C98]">My Booking</p>
                     </a>
                 </div>
             </div>
         </nav>
-
         <script type="module" src="js/docter-search.js"></script>
     </body>
 </html>

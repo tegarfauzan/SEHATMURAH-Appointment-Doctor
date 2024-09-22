@@ -1,70 +1,68 @@
 const inputs = document.querySelectorAll('input[required], input[name="appointment time"], input[name="gender"]');
 const continueBtn = document.getElementById("continue");
+const countInput = document.getElementById("count");
+const decrementButton = document.querySelector(".decrement");
+const incrementButton = document.querySelector(".increment");
 
+// Fungsi untuk validasi form
 function validateForm() {
     let isValid = true;
 
-    // Loop through all required inputs
+    // Loop melalui semua input yang diperlukan
     inputs.forEach((input) => {
         if (input.type === "radio") {
-            // For radio buttons, check if at least one is selected
+            // Untuk radio button, cek apakah ada yang dipilih
             const radios = document.querySelectorAll(`input[name="${input.name}"]`);
             const isChecked = Array.from(radios).some((radio) => radio.checked);
             if (!isChecked) {
                 isValid = false;
             }
         } else if (input.value.trim() === "") {
-            // Check if input value is empty
+            // Cek apakah input kosong
             isValid = false;
         }
     });
 
-    // Toggle button color based on form validity
+    // Ubah warna tombol berdasarkan validitas form
     if (isValid) {
-        if (countInput.value === "0" || countInput.value === "Years Old") {
-            continueBtn.style.backgroundColor = "#F1F1F1"; // Gray color
-            continueBtn.style.pointerEvents = "none";
-            // Disable button
+        if (countInput.value === "Years Old") {
+            continueBtn.style.backgroundColor = "#F1F1F1"; // Warna abu-abu
+            continueBtn.style.pointerEvents = "none"; // Nonaktifkan tombol
         } else {
-            continueBtn.style.backgroundColor = "#2C40FF"; // Blue color
-            continueBtn.style.pointerEvents = "auto";
+            continueBtn.style.backgroundColor = "#2C40FF"; // Warna biru
+            continueBtn.style.pointerEvents = "auto"; // Aktifkan tombol
         }
     } else {
-        continueBtn.classList.remove("#2C40FF");
-        continueBtn.style.backgroundColor = "#F1F1F1"; // Gray color
-        continueBtn.style.pointerEvents = "none";
+        continueBtn.style.backgroundColor = "#F1F1F1"; // Warna abu-abu
+        continueBtn.style.pointerEvents = "none"; // Nonaktifkan tombol
     }
 }
 
-// Add event listener to each input to trigger validation on change
-inputs.forEach((input) => {
-    input.addEventListener("input", validateForm);
-    input.addEventListener("change", validateForm); // For radio buttons
-});
-
-const countInput = document.getElementById("count");
-const decrementButton = document.querySelector(".decrement");
-const incrementButton = document.querySelector(".increment");
-
-// Fungsi untuk memastikan nilai input adalah angka dan tidak kurang dari 0
+// Fungsi untuk memvalidasi input count
 const validateInput = () => {
-    let value = countInput.value.trim(); // Menghapus spasi di depan dan belakang
-    if (countInput.value === "" || isNaN(value) || parseInt(value) < 0) {
-        countInput.value = 0; // Set nilai ke 0 jika tidak valid
+    let value = countInput.value.trim(); // Hapus spasi
+    if (isNaN(value) || parseInt(value) < 0) {
+        countInput.value = "Years Old"; // Set nilai menjadi "Years Old" jika tidak valid
     } else if (/^0\d/.test(value)) {
-        countInput.value = value.slice(1);
+        countInput.value = value.slice(1); // Hapus nol di depan
     }
+    countInput.addEventListener("blur", function () {
+        if (countInput.value.trim() === "") {
+            countInput.value = "Years Old";
+            countInput.style.color = "#757C98"; // Ubah warna teks
+        }
+    });
 
     colorActiveCount();
 };
 
+// Fungsi untuk mengubah warna teks berdasarkan nilai input
 const colorActiveCount = () => {
-    // Ubah warna teks berdasarkan nilai input
     if (countInput.value === "0" || countInput.value === "Years Old") {
-        countInput.style.color = "#757C98"; // Atur warna teks jika input adalah "0" atau "Years Old"
+        countInput.style.color = "#757C98"; // Warna abu-abu jika nilai "0" atau "Years Old"
         validateForm();
     } else {
-        countInput.style.color = "#161616"; // Reset warna teks jika input tidak memenuhi kondisi
+        countInput.style.color = "#161616"; // Reset warna jika input valid
         validateForm();
     }
 };
@@ -74,8 +72,12 @@ decrementButton.addEventListener("click", (event) => {
     event.preventDefault();
     validateInput();
     let currentValue = parseInt(countInput.value);
-    if (currentValue > 0) {
+    if (currentValue > 1) {
         countInput.value = currentValue - 1;
+    } else if (currentValue === 1) {
+        countInput.value = "Years Old";
+    } else if (currentValue == "Years Old") {
+        decrementButton.setAttribute("disabled", true);
     }
 
     colorActiveCount();
@@ -86,7 +88,12 @@ decrementButton.addEventListener("click", (event) => {
 incrementButton.addEventListener("click", (event) => {
     event.preventDefault();
     validateInput();
-    countInput.value = parseInt(countInput.value) + 1;
+    if (countInput.value === "Years Old") {
+        countInput.value = 1;
+        countInput.removeAttribute("readonly");
+    } else if (countInput.value >= 1) {
+        countInput.value = parseInt(countInput.value) + 1;
+    }
 
     colorActiveCount();
 });
@@ -96,48 +103,45 @@ countInput.addEventListener("input", validateInput);
 
 // LOGIKA TOMBOL CONTINUE
 document.addEventListener("DOMContentLoaded", function () {
-    const inputs = document.querySelectorAll('input[required], input[name="appointment time"], input[name="gender"]');
-    const continueBtn = document.getElementById("continue");
-
     function validateForm() {
         let isValid = true;
 
-        // Loop through all required inputs
+        // Loop melalui semua input yang diperlukan
         inputs.forEach((input) => {
             if (input.type === "radio") {
-                // For radio buttons, check if at least one is selected
+                // Untuk radio button, cek apakah ada yang dipilih
                 const radios = document.querySelectorAll(`input[name="${input.name}"]`);
                 const isChecked = Array.from(radios).some((radio) => radio.checked);
                 if (!isChecked) {
                     isValid = false;
                 }
             } else if (input.value.trim() === "") {
-                // Check if input value is empty
+                // Cek apakah input kosong
                 isValid = false;
             }
         });
 
-        // Toggle button color based on form validity
+        // Ubah warna tombol berdasarkan validitas form
         if (isValid) {
             if (countInput.value === "0" || countInput.value === "Years Old") {
-                continueBtn.style.backgroundColor = "#F1F1F1"; // Gray color
-                continueBtn.style.pointerEvents = "none"; // Disable button
+                continueBtn.style.backgroundColor = "#F1F1F1"; // Warna abu-abu
+                continueBtn.style.pointerEvents = "none"; // Nonaktifkan tombol
             } else {
-                continueBtn.style.backgroundColor = "#2C40FF"; // Blue color
-                continueBtn.style.pointerEvents = "auto"; // Enable button
+                continueBtn.style.backgroundColor = "#2C40FF"; // Warna biru
+                continueBtn.style.pointerEvents = "auto"; // Aktifkan tombol
             }
         } else {
-            continueBtn.style.backgroundColor = "#F1F1F1"; // Gray color
-            continueBtn.style.pointerEvents = "none"; // Disable button
+            continueBtn.style.backgroundColor = "#F1F1F1"; // Warna abu-abu
+            continueBtn.style.pointerEvents = "none"; // Nonaktifkan tombol
         }
     }
 
-    // Add event listener to each input to trigger validation on change
+    // Tambahkan event listener ke setiap input untuk memvalidasi saat input berubah
     inputs.forEach((input) => {
         input.addEventListener("input", validateForm);
-        input.addEventListener("change", validateForm); // For radio buttons
+        input.addEventListener("change", validateForm); // Untuk radio button
     });
 
-    // Initial validation check when page loads
+    // Cek validitas form saat halaman pertama kali dimuat
     validateForm();
 });

@@ -14,20 +14,19 @@
         <main class="relative mx-auto max-w-[640px] pb-[120px]">
             <header class="h-[219px] w-full rounded-b-2xl bg-[#2C40FF] px-4 pt-12">
                 <a href="doctor-details.html">
-                    <img src="assets/icons/arrow-left-blue.svg" alt="arrow left" />
+                    <img src="assets/icons/arrow-left-blue.svg" alt="Icon" />
                 </a>
                 <div class="absolute left-1/2 top-12 -translate-x-1/2">
                     <h1 class="mb-[3px] whitespace-nowrap text-center font-jakarta text-xl font-bold leading-[25.2px] text-[#FFFFFF]">Appointment Details</h1>
                     <p class="whitespace-nowrap text-center font-jakarta font-semibold leading-[20.16px] text-[#AEB5FF]">Set your appointment schedule</p>
                 </div>
             </header>
-            <section class="-mt-[91px] w-full space-y-4 pb-4">
-                <!-- cart -->
-                <div class="mx-4 space-y-5 rounded-3xl bg-[#FFFFFF] p-5">
-                    <div class="flex items-center gap-x-[12px]">
+            <section id="ContainerBookingConfirmation" class="-mt-[91px] w-full space-y-4 pb-4">
+                <div id="Card" class="mx-4 space-y-5 rounded-3xl bg-[#FFFFFF] p-5">
+                    <div id="CardHeader" class="flex items-center gap-x-[12px]">
                         <div class="relative h-[120px] w-[100px]">
-                            <img class="rounded-ee-md rounded-es-3xl rounded-se-3xl rounded-ss-md bg-[#F2F2F2] object-cover" src="assets/image/searchresult-dr-raze-invoker.png" alt="Dr. Raze Invoker" />
-                            <img class="absolute left-2 top-2" src="assets/icons/alert-online.svg" alt="alert online" />
+                            <img class="rounded-ee-md rounded-es-3xl rounded-se-3xl rounded-ss-md bg-[#F2F2F2] object-cover" src="assets/image/searchresult-dr-raze-invoker.png" alt="Image" />
+                            <img class="absolute left-2 top-2" src="assets/icons/alert-online.svg" alt="Icon" />
                         </div>
                         <div class="space-y-2">
                             <h3 class="font-jakarta font-bold leading-[20.16px] text-[#2C40FF]">Radiant Hospital</h3>
@@ -35,26 +34,26 @@
                             <p class="font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Internist Specialist</p>
                         </div>
                     </div>
-                    <div class="flex items-center justify-evenly rounded-2xl border border-[#F1F1F1] py-4">
+                    <div id="CardInfo" class="flex items-center justify-evenly rounded-2xl border border-[#F1F1F1] py-4">
                         <div class="grid w-[80.33px] place-items-center">
                             <div class="mb-1 flex gap-[2px]">
-                                <img src="assets/icons/searchresult-verify.svg" alt="verify" />
+                                <img src="assets/icons/searchresult-verify.svg" alt="Icon" />
                                 <h4 class="font-jakarta font-bold leading-[20.16px] text-[#161616]">Verify</h4>
                             </div>
                             <p class="font-jakarta text-sm font-semibold leading-[17.64px] text-[#757C98]">Certified</p>
                         </div>
-                        <img src="assets/icons/line-vertical.svg" alt="line vertical" />
+                        <hr class="w-[36px] rotate-90 border-[#F1F1F1]" />
                         <div class="grid w-[80.33px] place-items-center">
                             <div class="mb-1 flex gap-[2px]">
-                                <img src="assets/icons/searchresult-5-years.svg" alt="5 years" />
+                                <img src="assets/icons/searchresult-5-years.svg" alt="Icon" />
                                 <h4 class="font-jakarta font-bold leading-[20.16px] text-[#161616]">5 Years</h4>
                             </div>
                             <p class="font-jakarta text-sm font-semibold leading-[17.64px] text-[#757C98]">Experience</p>
                         </div>
-                        <img src="assets/icons/line-vertical.svg" alt="line vertical" />
+                        <hr class="w-[36px] rotate-90 border-[#F1F1F1]" />
                         <div class="grid w-[80.33px] place-items-center">
                             <div class="mb-1 flex gap-[2px]">
-                                <img src="assets/icons/searchresult-4.5.svg" alt="verify" />
+                                <img src="assets/icons/searchresult-4.5.svg" alt="Icon" />
                                 <h4 class="font-jakarta font-bold leading-[20.16px] text-[#161616]">4.5</h4>
                             </div>
                             <p class="font-jakarta text-sm font-semibold leading-[17.64px] text-[#757C98]">Rating</p>
@@ -62,103 +61,94 @@
                     </div>
                 </div>
                 <form action="payment-details.html">
-                    <div>
-                        <!-- make appointment -->
-                        <section class="mb-4 w-full space-y-6 rounded-3xl bg-[#FFFFFF] px-4 py-8">
+                    <div id="ContainerInputs">
+                        <section id="MakeAppointment" class="mb-4 w-full space-y-6 rounded-3xl bg-[#FFFFFF] px-4 py-8">
                             <h2 class="font-jakarta text-xl font-bold leading-[25.2px] text-[#161616]">Make Appointment</h2>
                             <div class="flex w-full items-center justify-between rounded-3xl border border-[#F1F1F1] bg-[#2C40FF08] p-6">
                                 <div>
                                     <h3 class="mb-[2px] font-jakarta text-lg font-bold leading-[22.68px] text-[#161616]">31 Aug 2024</h3>
                                     <p class="font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Doctor Available</p>
                                 </div>
-                                <img src="assets/icons/doctordetails-doctor-available.svg" alt="doctor available" />
+                                <img src="assets/icons/doctordetails-doctor-available.svg" alt="Icon" />
                             </div>
                             <div>
                                 <p class="mb-4 font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Set The Appointment Time.</p>
-                                <label class="group mb-3 flex items-center justify-between rounded-full border border-[#F1F1F1] p-4 text-[#757C98] has-[:checked]:border-[#2C40FF] has-[:checked]:bg-[#2C40FF08] has-[:checked]:text-[#2C40FF]">
-                                    <div class="flex items-center gap-[10px]">
-                                        <img src="assets/image/bookingconfirm-clock-nonactive.png" alt="clock nonactive" class="size-6 group-has-[:checked]:hidden" />
-                                        <img src="assets/image/bookingconfirm-clock-active.png" alt="clock active" class="hidden size-6 group-has-[:checked]:block" />
-                                        <p class="font-jakarta font-semibold leading-[20.16px]">09:30 AM - 10:30 AM</p>
-                                    </div>
-                                    <input id="09:30AM-10:30AM" type="radio" value="09:30 AM - 10:30 AM" name="appointment time" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
-                                </label>
-                                <label class="group mb-3 flex items-center justify-between rounded-full border border-[#F1F1F1] p-4 text-[#757C98] has-[:checked]:border-[#2C40FF] has-[:checked]:bg-[#2C40FF08] has-[:checked]:text-[#2C40FF]">
-                                    <div class="flex items-center gap-[10px]">
-                                        <img src="assets/image/bookingconfirm-clock-nonactive.png" alt="clock nonactive" class="size-6 group-has-[:checked]:hidden" />
-                                        <img src="assets/image/bookingconfirm-clock-active.png" alt="clock active" class="hidden size-6 group-has-[:checked]:block" />
-                                        <p class="font-jakarta font-semibold leading-[20.16px]">13:00 PM - 13:30 PM</p>
-                                    </div>
-                                    <input id="13:00PM-13:30PM" type="radio" value="13:00 PM - 13:30 PM" name="appointment time" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
-                                </label>
-                                <label class="group flex items-center justify-between rounded-full border border-[#F1F1F1] p-4 text-[#757C98] has-[:checked]:border-[#2C40FF] has-[:checked]:bg-[#2C40FF08] has-[:checked]:text-[#2C40FF]">
-                                    <div class="flex items-center gap-[10px]">
-                                        <img src="assets/image/bookingconfirm-clock-nonactive.png" alt="clock nonactive" class="size-6 group-has-[:checked]:hidden" />
-                                        <img src="assets/image/bookingconfirm-clock-active.png" alt="clock active" class="hidden size-6 group-has-[:checked]:block" />
-                                        <p class="font-jakarta font-semibold leading-[20.16px]">14:00 PM - 15:00PM</p>
-                                    </div>
-                                    <input id="14:00PM-15:00PM" type="radio" value="14:00 PM - 15:00PM" name="appointment time" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
-                                </label>
+                                <div id="ContainerInputsRadio">
+                                    <label class="group mb-3 flex items-center justify-between rounded-full border border-[#F1F1F1] p-4 text-[#757C98] has-[:checked]:border-[#2C40FF] has-[:checked]:bg-[#2C40FF08] has-[:checked]:text-[#2C40FF]">
+                                        <div class="flex items-center gap-[10px]">
+                                            <img src="assets/image/bookingconfirm-clock-nonactive.png" alt="Image" class="size-6 group-has-[:checked]:hidden" />
+                                            <img src="assets/image/bookingconfirm-clock-active.png" alt="Image" class="hidden size-6 group-has-[:checked]:block" />
+                                            <p class="font-jakarta font-semibold leading-[20.16px]">09:30 AM - 10:30 AM</p>
+                                        </div>
+                                        <input type="radio" name="appointment time" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
+                                    </label>
+                                    <label class="group mb-3 flex items-center justify-between rounded-full border border-[#F1F1F1] p-4 text-[#757C98] has-[:checked]:border-[#2C40FF] has-[:checked]:bg-[#2C40FF08] has-[:checked]:text-[#2C40FF]">
+                                        <div class="flex items-center gap-[10px]">
+                                            <img src="assets/image/bookingconfirm-clock-nonactive.png" alt="Image" class="size-6 group-has-[:checked]:hidden" />
+                                            <img src="assets/image/bookingconfirm-clock-active.png" alt="Image" class="hidden size-6 group-has-[:checked]:block" />
+                                            <p class="font-jakarta font-semibold leading-[20.16px]">13:00 PM - 13:30 PM</p>
+                                        </div>
+                                        <input type="radio" name="appointment time" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
+                                    </label>
+                                    <label class="group flex items-center justify-between rounded-full border border-[#F1F1F1] p-4 text-[#757C98] has-[:checked]:border-[#2C40FF] has-[:checked]:bg-[#2C40FF08] has-[:checked]:text-[#2C40FF]">
+                                        <div class="flex items-center gap-[10px]">
+                                            <img src="assets/image/bookingconfirm-clock-nonactive.png" alt="Image" class="size-6 group-has-[:checked]:hidden" />
+                                            <img src="assets/image/bookingconfirm-clock-active.png" alt="Image" class="hidden size-6 group-has-[:checked]:block" />
+                                            <p class="font-jakarta font-semibold leading-[20.16px]">14:00 PM - 15:00PM</p>
+                                        </div>
+                                        <input type="radio" name="appointment time" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
+                                    </label>
+                                </div>
                             </div>
                         </section>
-                        <!-- Patient Data -->
-                        <section class="w-full rounded-3xl bg-[#FFFFFF] px-4 py-8">
+                        <section id="PatientData" class="w-full rounded-3xl bg-[#FFFFFF] px-4 py-8">
                             <h2 class="mb-6 font-jakarta text-xl font-bold leading-[25.2px] text-[#161616]">Patient Data</h2>
-                            <label class="mb-6 block">
-                                <p class="mb-3 font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Name Of Patient</p>
-                                <div class="relative h-[56px] w-full rounded-full border border-[#F1F1F1]">
-                                    <input
-                                        required
-                                        type="text"
-                                        class="peer h-full w-full rounded-full pl-12 font-jakarta font-bold leading-[20.16px] text-[#161616] placeholder:font-jakarta placeholder:font-bold placeholder:leading-[20.16px] placeholder:text-[#757C98] focus:outline-none"
-                                        placeholder="Patient Full Name"
-                                    />
-                                    <img src="assets/icons/bookingconfirm-people-nonactive.svg" alt="people nonactive" class="absolute left-4 top-1/2 -translate-y-1/2" />
-                                    <img src="assets/icons/bookingconfirm-people-active.svg" alt="people active" class="absolute left-4 top-1/2 z-10 -translate-y-1/2 peer-placeholder-shown:hidden" />
-                                </div>
-                            </label>
-                            <!-- age -->
-                            <div class="mb-6">
-                                <p class="mb-3 font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Age</p>
-                                <label class="counter flex h-[56px] w-full items-center justify-between rounded-full border border-[#F1F1F1] p-4">
-                                    <button class="decrement"><img src="assets/icons/bookingconfirm-decrement.svg" alt="decrement" /></button>
-                                    <input type="text" name="age" id="count" value="Years Old" class="text-center font-jakarta font-bold leading-[20.16px] text-[#757C98] outline-none" />
-                                    <button class="increment"><img src="assets/icons/bookingconfirm-increment.svg" alt="increment" /></button>
+                            <div id="ContainerInputPatient">
+                                <label id="Name" class="mb-6 block">
+                                    <p class="mb-3 font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Name Of Patient</p>
+                                    <div class="relative h-[56px] w-full rounded-full border border-[#F1F1F1]">
+                                        <input required type="text" class="peer h-full w-full rounded-full pl-12 font-jakarta font-bold leading-[20.16px] text-[#161616] placeholder:font-jakarta placeholder:font-bold placeholder:leading-[20.16px] placeholder:text-[#757C98] focus:outline-none" placeholder="Patient Full Name" />
+                                        <img src="assets/icons/bookingconfirm-people-nonactive.svg" alt="Icon" class="absolute left-4 top-1/2 -translate-y-1/2" />
+                                        <img src="assets/icons/bookingconfirm-people-active.svg" alt="Icon" class="absolute left-4 top-1/2 z-10 -translate-y-1/2 peer-placeholder-shown:hidden" />
+                                    </div>
                                 </label>
-                            </div>
-                            <!-- gender -->
-                            <div>
-                                <p class="mb-3 font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Gender</p>
-                                <div class="counter flex w-full items-center gap-2">
-                                    <!-- woman -->
-                                    <label class="w-full rounded-full border border-[#F1F1F1] p-4 has-[:checked]:border-[1.5px] has-[:checked]:border-[#2C40FF] has-[:checked]:bg-[#2C40FF08]">
-                                        <div class="group flex items-center justify-between">
-                                            <div class="mr-2 flex items-center">
-                                                <img src="assets/icons/bookingconfirm-woman-nonactive.svg" alt="woman nonactive" class="mr-2 group-has-[:checked]:hidden" />
-                                                <img src="assets/icons/bookingconfirm-woman-active.svg" alt="woman active" class="mr-2 hidden group-has-[:checked]:block" />
-                                                <p class="font-jakarta font-bold leading-[20.16px] text-[#757C98] group-has-[:checked]:text-[#2C40FF]">Woman</p>
-                                            </div>
-                                            <input type="radio" value="woman" name="gender" id="woman" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
-                                        </div>
+                                <div id="Age" class="mb-6">
+                                    <p class="mb-3 font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Age</p>
+                                    <label class="counter flex h-[56px] w-full items-center justify-between rounded-full border border-[#F1F1F1] p-4">
+                                        <button class="decrement"><img src="assets/icons/bookingconfirm-decrement.svg" alt="Icon" /></button>
+                                        <input readonly type="text" name="age" id="count" value="Years Old" class="w-full text-center font-jakarta font-bold leading-[20.16px] text-[#757C98] focus:outline-none" />
+                                        <button class="increment"><img src="assets/icons/bookingconfirm-increment.svg" alt="Icon" /></button>
                                     </label>
-                                    <!-- man -->
-                                    <label class="w-full rounded-full border border-[#F1F1F1] p-4 has-[:checked]:border-[1.5px] has-[:checked]:border-[#2C40FF] has-[:checked]:bg-[#2C40FF08]">
-                                        <div class="group flex items-center justify-between">
-                                            <div class="mr-2 flex items-center">
-                                                <img src="assets/icons/man-nonactive.svg" alt="man nonactive" class="mr-2 group-has-[:checked]:hidden" />
-                                                <img src="assets/icons/man-active.svg" alt="man active" class="mr-2 hidden group-has-[:checked]:block" />
-                                                <p class="font-jakarta font-bold leading-[20.16px] text-[#757C98] group-has-[:checked]:text-[#2C40FF]">Man</p>
+                                </div>
+                                <div id="Gender">
+                                    <p class="mb-3 font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Gender</p>
+                                    <div class="counter flex w-full items-center gap-2">
+                                        <label id="Woman" class="w-full rounded-full border border-[#F1F1F1] p-4 has-[:checked]:border-[1.5px] has-[:checked]:border-[#2C40FF] has-[:checked]:bg-[#2C40FF08]">
+                                            <div class="group flex items-center justify-between">
+                                                <div class="mr-2 flex items-center">
+                                                    <img src="assets/icons/bookingconfirm-woman-nonactive.svg" alt="Icon" class="mr-2 group-has-[:checked]:hidden" />
+                                                    <img src="assets/icons/bookingconfirm-woman-active.svg" alt="Icon" class="mr-2 hidden group-has-[:checked]:block" />
+                                                    <p class="font-jakarta font-bold leading-[20.16px] text-[#757C98] group-has-[:checked]:text-[#2C40FF]">Woman</p>
+                                                </div>
+                                                <input type="radio" name="gender" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
                                             </div>
-                                            <input type="radio" value="man" name="gender" id="man" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
-                                        </div>
-                                    </label>
+                                        </label>
+                                        <label id="Man" class="w-full rounded-full border border-[#F1F1F1] p-4 has-[:checked]:border-[1.5px] has-[:checked]:border-[#2C40FF] has-[:checked]:bg-[#2C40FF08]">
+                                            <div class="group flex items-center justify-between">
+                                                <div class="mr-2 flex items-center">
+                                                    <img src="assets/icons/man-nonactive.svg" alt="Icon" class="mr-2 group-has-[:checked]:hidden" />
+                                                    <img src="assets/icons/man-active.svg" alt="Icon" class="mr-2 hidden group-has-[:checked]:block" />
+                                                    <p class="font-jakarta font-bold leading-[20.16px] text-[#757C98] group-has-[:checked]:text-[#2C40FF]">Man</p>
+                                                </div>
+                                                <input type="radio" name="gender" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
+                                            </div>
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                         </section>
                     </div>
-
-                    <!-- cta -->
-                    <nav class="fixed bottom-0 left-0 right-0 z-30">
+                    <nav id="Cta" class="fixed bottom-0 left-0 right-0 z-30">
                         <div class="mx-auto max-w-[640px]">
                             <div class="flex h-[120px] w-full items-center justify-between space-x-2 rounded-t-3xl bg-[#FFFFFF] px-4">
                                 <div>
