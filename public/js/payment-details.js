@@ -74,7 +74,6 @@ phoneNumberInput.addEventListener("keydown", function (e) {
         e.preventDefault();
     }
 });
-
 phoneNumberInput.addEventListener("input", function () {
     const inputAfterCode = this.value.slice(defaultCode.length);
     this.value = defaultCode + inputAfterCode.replace(/\D/g, "");
