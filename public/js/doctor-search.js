@@ -34,10 +34,10 @@ for (let i = 0; i < select.length; i++) {
 // OPEN modal
 openButton.addEventListener("click", (event) => {
     event.preventDefault();
-    const currentValue = selectValue.getAttribute("data-value");
+    const storedValue = localStorage.getItem("data-value");
     form.classList.add("hidden");
-    if (currentValue) {
-        const radioToCheck = document.querySelector(`input[name="specialist"][value="${currentValue}"]`);
+    if (storedValue) {
+        const radioToCheck = document.querySelector(`input[name="specialist"][value="${storedValue}"]`);
         if (radioToCheck) {
             radioToCheck.checked = true;
         }
@@ -78,11 +78,14 @@ closeButton.addEventListener("click", (event) => {
     form.classList.remove("hidden");
 
     const radioInputs = document.querySelectorAll('input[name="specialist"]');
-    if (selectValue.innerHTML == "Choose a specialist") {
-        radioInputs.forEach((radio) => {
+    const storedValue = localStorage.getItem("data-value");
+    radioInputs.forEach((radio) => {
+        if (radio.value === storedValue) {
+            radio.checked = true;
+        }else{
             radio.checked = false;
-        });
-    }
+        }
+    });
     modal.classList.add("hidden");
 });
 
