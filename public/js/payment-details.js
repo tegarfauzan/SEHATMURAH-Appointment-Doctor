@@ -27,47 +27,60 @@ for (let select of selects) {
     });
 }
 
+// Bank Account Name
+const bankAccountName = document.getElementById("inputBankAccountName");
+bankAccountName.addEventListener("input", function () {
+    bankAccountName.setAttribute("value", this.value);
+});
+
 // Bank Account Number Input
-const bankAccountNumberInput = document.getElementById("bankAccountNumber");
+const bankAccountNumberInput = document.getElementById("inputBankAccountNumber");
 bankAccountNumberInput.addEventListener("input", function () {
     this.value = this.value.replace(/[^0-9]/g, "");
+    bankAccountNumberInput.setAttribute("value", this.value);
 });
 
 // Upload Image
 const fileInput = document.getElementById("file-upload");
 const uploadText = document.getElementById("upload");
-
 fileInput.addEventListener("change", function () {
     if (fileInput.files.length > 0) {
         uploadText.classList.add("hidden");
         fileInput.classList.remove("invisible");
+        fileInput.setAttribute("value", fileInput.files[0].name);
     } else {
         resetUpload();
     }
 });
-
 function resetUpload() {
     uploadText.classList.remove("hidden");
     fileInput.classList.add("invisible");
-    fileInput.value = "";
+    fileInput.setAttribute("value", "");
 }
-
 fileInput.addEventListener("input", function () {
     if (fileInput.files.length === 0) {
         resetUpload();
     }
 });
 
+// Fullname Input
+const fullName = document.getElementById("fullName");
+fullName.addEventListener("input", function () {
+    this.setAttribute("value", this.value);
+});
+// Email Input
+const email = document.getElementById("email");
+email.addEventListener("input", function () {
+    this.setAttribute("value", this.value);
+});
 // Phone Number Input
 const phoneNumberInput = document.getElementById("phoneNumber");
 const defaultCode = "+62";
-
 phoneNumberInput.addEventListener("focus", function () {
     if (!this.value.startsWith(defaultCode)) {
-        this.value = defaultCode;
+        this.setAttribute("value", defaultCode); // Mengubah atribut value di HTML
     }
 });
-
 phoneNumberInput.addEventListener("keydown", function (e) {
     const cursorPosition = this.selectionStart;
     if (cursorPosition <= defaultCode.length && (e.key === "Backspace" || e.key === "Delete")) {
@@ -77,6 +90,7 @@ phoneNumberInput.addEventListener("keydown", function (e) {
 phoneNumberInput.addEventListener("input", function () {
     const inputAfterCode = this.value.slice(defaultCode.length);
     this.value = defaultCode + inputAfterCode.replace(/\D/g, "");
+    this.setAttribute("value", this.value);
 });
 
 // Submit Button Activation

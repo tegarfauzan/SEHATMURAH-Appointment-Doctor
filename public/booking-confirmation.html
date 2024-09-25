@@ -60,7 +60,7 @@
                         </div>
                     </div>
                 </div>
-                <form action="payment-details.html">
+                <form method="" action="payment-details.html">
                     <div id="ContainerInputs">
                         <section id="MakeAppointment" class="mb-4 w-full space-y-6 rounded-3xl bg-[#FFFFFF] px-4 py-8">
                             <h2 class="font-jakarta text-xl font-bold leading-[25.2px] text-[#161616]">Make Appointment</h2>
@@ -80,7 +80,7 @@
                                             <img src="assets/image/bookingconfirm-clock-active.png" alt="Image" class="hidden size-6 group-has-[:checked]:block" />
                                             <p class="font-jakarta font-semibold leading-[20.16px]">09:30 AM - 10:30 AM</p>
                                         </div>
-                                        <input type="radio" name="appointment time" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
+                                        <input id="" value="09:30 AM - 10:30 AM" type="radio" name="appointment time" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
                                     </label>
                                     <label class="group mb-3 flex items-center justify-between rounded-full border border-[#F1F1F1] p-4 text-[#757C98] has-[:checked]:border-[#2C40FF] has-[:checked]:bg-[#2C40FF08] has-[:checked]:text-[#2C40FF]">
                                         <div class="flex items-center gap-[10px]">
@@ -88,15 +88,15 @@
                                             <img src="assets/image/bookingconfirm-clock-active.png" alt="Image" class="hidden size-6 group-has-[:checked]:block" />
                                             <p class="font-jakarta font-semibold leading-[20.16px]">13:00 PM - 13:30 PM</p>
                                         </div>
-                                        <input type="radio" name="appointment time" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
+                                        <input id="" value="13:00 PM - 13:30 PM" type="radio" name="appointment time" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
                                     </label>
                                     <label class="group flex items-center justify-between rounded-full border border-[#F1F1F1] p-4 text-[#757C98] has-[:checked]:border-[#2C40FF] has-[:checked]:bg-[#2C40FF08] has-[:checked]:text-[#2C40FF]">
                                         <div class="flex items-center gap-[10px]">
                                             <img src="assets/image/bookingconfirm-clock-nonactive.png" alt="Image" class="size-6 group-has-[:checked]:hidden" />
                                             <img src="assets/image/bookingconfirm-clock-active.png" alt="Image" class="hidden size-6 group-has-[:checked]:block" />
-                                            <p class="font-jakarta font-semibold leading-[20.16px]">14:00 PM - 15:00PM</p>
+                                            <p class="font-jakarta font-semibold leading-[20.16px]">14:00 PM - 15:00 PM</p>
                                         </div>
-                                        <input type="radio" name="appointment time" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
+                                        <input id="" value="14:00 PM - 15:00 PM" type="radio" name="appointment time" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
                                     </label>
                                 </div>
                             </div>
@@ -107,7 +107,7 @@
                                 <label id="Name" class="mb-6 block">
                                     <p class="mb-3 font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Name Of Patient</p>
                                     <div class="relative h-[56px] w-full rounded-full border border-[#F1F1F1]">
-                                        <input required type="text" class="peer h-full w-full rounded-full pl-12 font-jakarta font-bold leading-[20.16px] text-[#161616] placeholder:font-jakarta placeholder:font-bold placeholder:leading-[20.16px] placeholder:text-[#757C98] focus:outline-none" placeholder="Patient Full Name" />
+                                        <input required id="Patient" value="" type="text" class="peer h-full w-full rounded-full pl-12 font-jakarta font-bold leading-[20.16px] text-[#161616] placeholder:font-jakarta placeholder:font-bold placeholder:leading-[20.16px] placeholder:text-[#757C98] focus:outline-none" placeholder="Patient Full Name" />
                                         <img src="assets/icons/bookingconfirm-people-nonactive.svg" alt="Icon" class="absolute left-4 top-1/2 -translate-y-1/2" />
                                         <img src="assets/icons/bookingconfirm-people-active.svg" alt="Icon" class="absolute left-4 top-1/2 z-10 -translate-y-1/2 peer-placeholder-shown:hidden" />
                                     </div>
@@ -130,7 +130,7 @@
                                                     <img src="assets/icons/bookingconfirm-woman-active.svg" alt="Icon" class="mr-2 hidden group-has-[:checked]:block" />
                                                     <p class="font-jakarta font-bold leading-[20.16px] text-[#757C98] group-has-[:checked]:text-[#2C40FF]">Woman</p>
                                                 </div>
-                                                <input type="radio" name="gender" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
+                                                <input type="radio" value="Woman" id="Woman" name="gender" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
                                             </div>
                                         </label>
                                         <label id="Man" class="w-full rounded-full border border-[#F1F1F1] p-4 has-[:checked]:border-[1.5px] has-[:checked]:border-[#2C40FF] has-[:checked]:bg-[#2C40FF08]">
@@ -140,7 +140,7 @@
                                                     <img src="assets/icons/man-active.svg" alt="Icon" class="mr-2 hidden group-has-[:checked]:block" />
                                                     <p class="font-jakarta font-bold leading-[20.16px] text-[#757C98] group-has-[:checked]:text-[#2C40FF]">Man</p>
                                                 </div>
-                                                <input type="radio" name="gender" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
+                                                <input type="radio" name="gender" value="Man" id="Man" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
                                             </div>
                                         </label>
                                     </div>

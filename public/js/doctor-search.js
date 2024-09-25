@@ -12,6 +12,7 @@ const arrow = document.getElementById("arrow");
 const form = document.getElementById("form");
 const select = document.getElementsByTagName("select");
 const radioButtons = document.querySelectorAll('input[type="radio"]');
+const inputSpeciality = document.getElementById("inputSpeciality");
 
 // Select options
 for (let i = 0; i < select.length; i++) {
@@ -34,7 +35,9 @@ for (let i = 0; i < select.length; i++) {
 // OPEN modal
 openButton.addEventListener("click", (event) => {
     event.preventDefault();
-    const storedValue = localStorage.getItem("data-value");
+    const storedValue = localStorage.getItem("value");
+    inputSpeciality.setAttribute("value", storedValue);
+
     form.classList.add("hidden");
     if (storedValue) {
         const radioToCheck = document.querySelector(`input[name="specialist"][value="${storedValue}"]`);
@@ -61,8 +64,9 @@ okButton.addEventListener("click", (event) => {
     if (selectedRadio) {
         event.preventDefault();
         const selectedValue = selectedRadio.value;
-        selectValue.setAttribute("data-value", selectedValue);
-        localStorage.setItem("data-value", selectedValue);
+        inputSpeciality.setAttribute("value", selectedValue);
+
+        localStorage.setItem("value", selectedValue);
         selectValue.innerHTML = selectedValue;
         selectValue.classList.add("text-[#161616]");
         chooseGrey.classList.add("hidden");
@@ -78,11 +82,11 @@ closeButton.addEventListener("click", (event) => {
     form.classList.remove("hidden");
 
     const radioInputs = document.querySelectorAll('input[name="specialist"]');
-    const storedValue = localStorage.getItem("data-value");
+    const oldValue = inputSpeciality.getAttribute("value");
     radioInputs.forEach((radio) => {
-        if (radio.value === storedValue) {
+        if (radio.value === oldValue) {
             radio.checked = true;
-        }else{
+        } else {
             radio.checked = false;
         }
     });
@@ -92,7 +96,7 @@ closeButton.addEventListener("click", (event) => {
 // simpanan sementara localstorage
 document.addEventListener("DOMContentLoaded", function () {
     const option = localStorage.getItem("option");
-    const dataValue = localStorage.getItem("data-value");
+    const value = localStorage.getItem("value");
     const selectElement = document.querySelector("#MySelect");
 
     if (option && selectElement) {
@@ -102,8 +106,8 @@ document.addEventListener("DOMContentLoaded", function () {
         selectElement.classList.add("font-bold");
         selectElement.classList.add("text-[#161616]");
     }
-    if (dataValue) {
-        selectValue.innerHTML = dataValue;
+    if (value) {
+        selectValue.innerHTML = value;
         selectValue.classList.add("text-[#161616]");
         chooseGrey.classList.add("hidden");
         modal.classList.add("hidden");

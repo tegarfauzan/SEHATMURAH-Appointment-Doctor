@@ -12,7 +12,7 @@
     </head>
     <body class="bg-[#F7F8FA]">
         <main class="mx-auto flex h-screen max-w-[640px] items-center justify-center px-4">
-            <form action="search-result.html" class="w-full">
+            <form action="search-result.html" method="" class="w-full">
                 <div id="form" class="w-full rounded-3xl bg-[#FFFFFF] px-4 py-8">
                     <div class="mb-8 grid justify-items-center">
                         <img src="assets/icons/doctorsearch-lets-make-appointment.svg" alt="Icon" class="mb-4" />
@@ -34,7 +34,8 @@
                         </div>
                         <div class="mb-8">
                             <h3 class="font-jakarta font-semibold leading-[20.16px] text-[#757C98]">What Speciality you need?</h3>
-                            <button id="openModal" data-value="" class="relative mt-4 h-[56px] w-full rounded-full border border-[#F1F1F1] pl-12 text-start font-jakarta font-bold leading-[20.16px] text-[#757C98]">
+                            <button id="openModal" class="relative mt-4 h-[56px] w-full rounded-full border border-[#F1F1F1] pl-12 text-start font-jakarta font-bold leading-[20.16px] text-[#757C98]">
+                                <input type="text" value="" name="inputSpeciality" id="inputSpeciality" class="absolute left-0 hidden w-full border" />
                                 <span id="selectedValue">Choose a specialist</span>
                                 <img src="assets/icons/doctorsearch-input-choose-a-specialist-nonactive.svg" alt="Icon" id="chooseGrey" class="absolute left-4 top-1/2 z-20 -translate-y-1/2" />
                                 <img src="assets/icons/doctorsearch-input-choose-a-specialist-active.svg" alt="Icon" id="chooseBlack" class="absolute left-4 top-1/2 -translate-y-1/2" />
@@ -66,7 +67,7 @@
                                                     <p class="font-jakarta text-[16px] font-semibold leading-[20.16px] text-[#757C98]">230 doctors</p>
                                                 </div>
                                             </div>
-                                            <input value="Obstetrics" type="radio" name="specialist" class=" size-6 rounded-full p-1 accent-[#2C40FF]" />
+                                            <input value="Obstetrics" type="radio" name="specialist" class="size-6 rounded-full p-1 accent-[#2C40FF]" />
                                         </div>
                                     </div>
                                 </label>

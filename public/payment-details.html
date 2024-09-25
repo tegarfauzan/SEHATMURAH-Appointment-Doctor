@@ -81,7 +81,7 @@
                         </div>
                     </div>
                 </section>
-                <form action="succes-page.html">
+                <form action="succes-page.html" method="">
                     <section id="BankTransfer" class="mb-4 w-full rounded-3xl bg-[#FFFFFF] px-4 py-8">
                         <h2 class="mb-6 font-jakarta text-xl font-bold leading-[25.2px] text-[#161616]">Bank Transfer</h2>
                         <div class="container-input-bank space-y-6">
@@ -148,7 +148,7 @@
                         <label id="BankAccountName" class="block">
                             <p class="mb-3 font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Bank Account Name</p>
                             <div class="relative">
-                                <input type="text" required placeholder="Your Bank Account Name" name="bankAccountName" class="peer h-[56px] w-full rounded-[100px] border border-[#F1F1F1] bg-white pl-12 font-jakarta font-bold leading-[20.16px] text-[#161616] placeholder:font-jakarta placeholder:font-bold placeholder:leading-[20.16px] placeholder:text-[#757C98] focus:outline-none" />
+                                <input type="text" id="inputBankAccountName" value="" required placeholder="Your Bank Account Name" name="bankAccountName" class="peer h-[56px] w-full rounded-[100px] border border-[#F1F1F1] bg-white pl-12 font-jakarta font-bold leading-[20.16px] text-[#161616] placeholder:font-jakarta placeholder:font-bold placeholder:leading-[20.16px] placeholder:text-[#757C98] focus:outline-none" />
                                 <img src="assets/icons/bookingconfirm-people-nonactive.svg" alt="Icon" class="absolute left-4 top-1/2 hidden -translate-y-1/2 peer-invalid:block" />
                                 <img src="assets/icons/bookingconfirm-people-active.svg" alt="Icon" class="absolute left-4 top-1/2 hidden -translate-y-1/2 peer-valid:block" />
                             </div>
@@ -156,7 +156,7 @@
                         <label id="BankAccountNumber" class="block">
                             <p class="mb-3 font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Bank Account Number</p>
                             <div class="relative">
-                                <input type="text" required placeholder="Your Bank Account Number" name="bankAccountNumber" id="bankAccountNumber" class="peer h-[56px] w-full rounded-[100px] border border-[#F1F1F1] bg-white pl-12 font-jakarta font-bold leading-[20.16px] text-[#161616] placeholder:font-jakarta placeholder:font-bold placeholder:leading-[20.16px] placeholder:text-[#757C98] focus:outline-none" />
+                                <input type="text" value="" required placeholder="Your Bank Account Number" name="inputBankAccountNumber" id="inputBankAccountNumber" class="peer h-[56px] w-full rounded-[100px] border border-[#F1F1F1] bg-white pl-12 font-jakarta font-bold leading-[20.16px] text-[#161616] placeholder:font-jakarta placeholder:font-bold placeholder:leading-[20.16px] placeholder:text-[#757C98] focus:outline-none" />
                                 <img src="assets/icons/paymentdetails-input-wallet-nonactive.svg" alt="Icon" class="absolute left-4 top-1/2 hidden -translate-y-1/2 peer-invalid:block" />
                                 <img src="assets/icons/paymentdetails-input-wallet-active.svg" alt="Icon" class="absolute left-4 top-1/2 hidden -translate-y-1/2 peer-valid:block" />
                             </div>
@@ -165,7 +165,7 @@
                             <p class="mb-3 font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Upload Your Payment Of Proof</p>
                             <div class="relative rounded-[100px] border border-[#F1F1F1] bg-white py-[18px]">
                                 <p id="upload" class="absolute left-12 top-1/2 -translate-y-1/2 py-[18px] font-jakarta font-bold leading-[20.16px] text-[#757C98]">Upload Image</p>
-                                <input required type="file" name="file-upload" id="file-upload" class="peer invisible w-full pl-12 font-jakarta font-bold leading-[20.16px] text-[#161616] file:hidden" />
+                                <input required type="file" value="" name="file-upload" id="file-upload" class="peer invisible w-full pl-12 font-jakarta font-bold leading-[20.16px] text-[#161616] file:hidden" />
                                 <img src="assets/icons/paymentdetails-input-image-nonactive.svg" alt="Icon" class="absolute left-4 top-1/2 hidden -translate-y-1/2 peer-invalid:block" />
                                 <img src="assets/icons/paymentdetails-input-image-active.svg" alt="Icon" class="absolute left-4 top-1/2 hidden -translate-y-1/2 peer-valid:block" />
                                 <img src="assets/icons/paymentdetails-input-image-download.svg" alt="Icon" class="absolute right-4 top-1/2 -translate-y-1/2" />
@@ -177,7 +177,7 @@
                         <label id="FullName" class="block">
                             <p class="mb-3 font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Full Name</p>
                             <div class="relative">
-                                <input type="text" required placeholder="Full Name" name="fullName" class="peer h-[56px] w-full rounded-[100px] border border-[#F1F1F1] bg-white pl-12 font-jakarta font-bold leading-[20.16px] text-[#161616] placeholder:font-jakarta placeholder:font-bold placeholder:leading-[20.16px] placeholder:text-[#757C98] focus:outline-none" />
+                                <input value="" id="fullName" type="text" required placeholder="Full Name" name="fullName" class="peer h-[56px] w-full rounded-[100px] border border-[#F1F1F1] bg-white pl-12 font-jakarta font-bold leading-[20.16px] text-[#161616] placeholder:font-jakarta placeholder:font-bold placeholder:leading-[20.16px] placeholder:text-[#757C98] focus:outline-none" />
                                 <img src="assets/icons/bookingconfirm-people-nonactive.svg" alt="Icon" class="absolute left-4 top-1/2 hidden -translate-y-1/2 peer-placeholder-shown:block" />
                                 <img src="assets/icons/bookingconfirm-people-active.svg" alt="Icon" class="absolute left-4 top-1/2 -translate-y-1/2 peer-placeholder-shown:hidden" />
                             </div>
@@ -185,7 +185,7 @@
                         <label id="Email" class="block">
                             <p class="mb-3 font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Email Address</p>
                             <div class="relative">
-                                <input type="email" required placeholder="Write Your Email" name="email" class="peer h-[56px] w-full rounded-[100px] border border-[#F1F1F1] bg-white pl-12 font-jakarta font-bold leading-[20.16px] text-[#161616] placeholder:font-jakarta placeholder:font-bold placeholder:leading-[20.16px] placeholder:text-[#757C98] focus:outline-none" />
+                                <input id="email" type="email" value="" required placeholder="Write Your Email" name="email" class="peer h-[56px] w-full rounded-[100px] border border-[#F1F1F1] bg-white pl-12 font-jakarta font-bold leading-[20.16px] text-[#161616] placeholder:font-jakarta placeholder:font-bold placeholder:leading-[20.16px] placeholder:text-[#757C98] focus:outline-none" />
                                 <img src="assets/icons/paymentdetails-email-nonactive.svg" alt="Icon" class="absolute left-4 top-1/2 hidden -translate-y-1/2 peer-placeholder-shown:block" />
                                 <img src="assets/icons/paymentdetails-email-active.svg" alt="Icon" class="absolute left-4 top-1/2 block -translate-y-1/2 peer-placeholder-shown:hidden" />
                             </div>
@@ -193,7 +193,7 @@
                         <label id="PhoneNumber" class="block">
                             <p class="mb-3 font-jakarta font-semibold leading-[20.16px] text-[#757C98]">Phone No.</p>
                             <div class="relative">
-                                <input type="tel" required placeholder="+62 | Enter your phone number" name="phoneNumber" id="phoneNumber" class="peer h-[56px] w-full rounded-[100px] border border-[#F1F1F1] bg-white pl-12 font-jakarta font-bold leading-[20.16px] text-[#161616] placeholder:font-jakarta placeholder:font-bold placeholder:leading-[20.16px] placeholder:text-[#757C98] focus:outline-none" />
+                                <input type="tel" value="" required placeholder="+62 | Enter your phone number" name="phoneNumber" id="phoneNumber" class="peer h-[56px] w-full rounded-[100px] border border-[#F1F1F1] bg-white pl-12 font-jakarta font-bold leading-[20.16px] text-[#161616] placeholder:font-jakarta placeholder:font-bold placeholder:leading-[20.16px] placeholder:text-[#757C98] focus:outline-none" />
                                 <img src="assets/icons/paymentdetails-phone-nonactive.svg" alt="Icon" class="absolute left-4 top-1/2 hidden -translate-y-1/2 peer-invalid:block" />
                                 <img src="assets/icons/paymentdetails-phone-active.svg" alt="Icon" class="absolute left-4 top-1/2 hidden -translate-y-1/2 peer-valid:block" />
                             </div>

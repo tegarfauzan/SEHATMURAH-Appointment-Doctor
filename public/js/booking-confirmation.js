@@ -3,6 +3,14 @@ const continueBtn = document.getElementById("continue");
 const countInput = document.getElementById("count");
 const decrementButton = document.querySelector(".decrement");
 const incrementButton = document.querySelector(".increment");
+const patient = document.getElementById("Patient");
+
+// Name Of Patient
+patient.addEventListener("input", (event) => {
+    patient.setAttribute("value", patient.value);
+});
+
+// Years Old
 
 // Fungsi untuk validasi form
 function validateForm() {
@@ -43,12 +51,15 @@ const validateInput = () => {
     let value = countInput.value.trim(); // Hapus spasi
     if (isNaN(value) || parseInt(value) < 0) {
         countInput.value = "Years Old"; // Set nilai menjadi "Years Old" jika tidak valid
+        countInput.setAttribute("value", countInput.value);
     } else if (/^0\d/.test(value)) {
         countInput.value = value.slice(1); // Hapus nol di depan
+        countInput.setAttribute("value", countInput.value);
     }
     countInput.addEventListener("blur", function () {
         if (countInput.value.trim() === "") {
             countInput.value = "Years Old";
+            countInput.setAttribute("value", countInput.value);
             countInput.style.color = "#757C98"; // Ubah warna teks
         }
     });
@@ -74,6 +85,7 @@ decrementButton.addEventListener("click", (event) => {
     let currentValue = parseInt(countInput.value);
     if (currentValue > 1) {
         countInput.value = currentValue - 1;
+        countInput.setAttribute("value", countInput.value);
     } else if (currentValue === 1) {
         countInput.value = "Years Old";
     } else if (currentValue == "Years Old") {
@@ -90,9 +102,11 @@ incrementButton.addEventListener("click", (event) => {
     validateInput();
     if (countInput.value === "Years Old") {
         countInput.value = 1;
+        countInput.setAttribute("value", countInput.value);
         countInput.removeAttribute("readonly");
     } else if (countInput.value >= 1) {
         countInput.value = parseInt(countInput.value) + 1;
+        countInput.setAttribute("value", countInput.value);
     }
 
     colorActiveCount();
