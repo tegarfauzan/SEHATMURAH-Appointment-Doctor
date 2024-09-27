@@ -21,7 +21,6 @@ const selects = document.getElementsByTagName("select");
 for (let select of selects) {
     select.addEventListener("change", function () {
         const isSelected = this.value;
-        localStorage.setItem("banking", isSelected);
         this.classList.toggle("text-[#757C98]", !isSelected);
         this.classList.toggle("text-[#161616]", isSelected);
     });

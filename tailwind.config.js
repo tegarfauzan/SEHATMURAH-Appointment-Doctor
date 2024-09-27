@@ -6,6 +6,9 @@ module.exports = {
             fontFamily: {
                 jakarta: ['"Plus Jakarta Sans"', "sans-serif"],
             },
+            maxWidth: {
+                "phone": "640px",
+            },
         },
     },
     plugins: [],
