@@ -57,9 +57,7 @@ function resetUpload() {
     fileInput.setAttribute("value", "");
 }
 fileInput.addEventListener("input", function () {
-    if (fileInput.files.length === 0) {
-        resetUpload();
-    }
+    if (!fileInput.files.length) resetUpload();
 });
 
 // Fullname Input
@@ -76,15 +74,11 @@ email.addEventListener("input", function () {
 const phoneNumberInput = document.getElementById("phoneNumber");
 const defaultCode = "+62";
 phoneNumberInput.addEventListener("focus", function () {
-    if (!this.value.startsWith(defaultCode)) {
-        this.setAttribute("value", defaultCode); // Mengubah atribut value di HTML
-    }
+    if (!this.value.startsWith(defaultCode)) this.setAttribute("value", defaultCode);
 });
 phoneNumberInput.addEventListener("keydown", function (e) {
     const cursorPosition = this.selectionStart;
-    if (cursorPosition <= defaultCode.length && (e.key === "Backspace" || e.key === "Delete")) {
-        e.preventDefault();
-    }
+    if (cursorPosition <= defaultCode.length && (e.key === "Backspace" || e.key === "Delete")) e.preventDefault();
 });
 phoneNumberInput.addEventListener("input", function () {
     const inputAfterCode = this.value.slice(defaultCode.length);
@@ -110,9 +104,7 @@ inputs.forEach((input) => input.addEventListener("input", validateForm));
 bankingRadios.forEach((radio) => radio.addEventListener("change", validateForm));
 
 form.addEventListener("submit", (e) => {
-    if (submitButton.disabled) {
-        e.preventDefault();
-    }
+    if (submitButton.disabled) e.preventDefault();
 });
 
 // Initial validation

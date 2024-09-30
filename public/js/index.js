@@ -21,24 +21,25 @@ var cardsSwiper = new Swiper(".cardsSwiper", {
 // TABS
 const tabs = document.querySelectorAll(".tab-button");
 const contents = document.querySelectorAll(".content");
-
+const updateTabStyles = (tab, isActive) => {
+    tab.classList.toggle("active-tab", isActive);
+    tab.classList.toggle("bg-[#2C40FF17]", isActive);
+    tab.classList.toggle("text-[#2C40FF]", isActive);
+    tab.classList.toggle("font-bold", isActive);
+    tab.classList.toggle("border", !isActive);
+    tab.classList.toggle("border-[#F1F1F1]", !isActive);
+    tab.classList.toggle("bg-[#FFFFFF]", !isActive);
+    tab.classList.toggle("font-semibold", !isActive);
+    tab.classList.toggle("text-[#757C98]", !isActive);
+};
 tabs.forEach((tab) => {
     tab.addEventListener("click", () => {
-        tabs.forEach((t) => {
-            t.classList.remove("active-tab", "bg-[#2C40FF17]", "text-[#2C40FF]", "font-bold");
-            t.classList.add("border", "border-[#F1F1F1]", "bg-[#FFFFFF]", "font-semibold", "text-[#757C98]");
-        });
-
-        contents.forEach((c) => {
-            c.classList.add("hidden");
-            c.classList.remove("flex");
-        });
-
-        tab.classList.add("active-tab", "bg-[#2C40FF17]", "text-[#2C40FF]", "font-bold");
-        tab.classList.remove("border", "border-[#F1F1F1]", "bg-[#FFFFFF]", "font-semibold", "text-[#757C98]");
-
         const targetTab = tab.getAttribute("data-target-tab");
-        document.querySelector(targetTab).classList.remove("hidden");
-        document.querySelector(targetTab).classList.add("flex");
+
+        tabs.forEach((t) => updateTabStyles(t, false)); // Nonaktifkan semua tab
+        contents.forEach((c) => c.classList.add("hidden")); // Sembunyikan semua konten
+
+        updateTabStyles(tab, true); // Aktifkan tab yang dipilih
+        document.querySelector(targetTab).classList.remove("hidden"); // Tampilkan konten yang sesuai
     });
 });

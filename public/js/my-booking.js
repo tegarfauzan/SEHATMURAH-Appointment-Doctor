@@ -16,9 +16,7 @@ phoneNumberInput.addEventListener("focus", function () {
 
 phoneNumberInput.addEventListener("keydown", function (e) {
     const cursorPosition = this.selectionStart;
-    if (cursorPosition <= defaultCode.length && (e.key === "Backspace" || e.key === "Delete")) {
-        e.preventDefault();
-    }
+    if (cursorPosition <= defaultCode.length && (e.key === "Backspace" || e.key === "Delete")) e.preventDefault();
 });
 phoneNumberInput.addEventListener("input", function () {
     const inputAfterCode = this.value.slice(defaultCode.length);
